@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const SITE_URL = "https://red-or-blue.vercel.app";
+const SITE_URL = "https://red-blue-button-c4sbdl7cu-kmavrs-projects.vercel.app";
 
 export function useShare(survived: boolean | null, bluePct: number) {
   const [copied, setCopied] = useState(false);
