@@ -27,8 +27,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(400).json({ error: 'Invalid choice' });
   }
 
-  console.log('SUPABASE_URL:', process.env.SUPABASE_URL?.slice(0, 40));
-  console.log('SERVICE_KEY set:', !!process.env.SUPABASE_SERVICE_KEY);
 
   const ip = getIp(req);
   const ipHash = hashIp(ip);
@@ -53,7 +51,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   if (voteError) {
     console.error('vote insert error:', voteError);
-    return res.status(500).json({ error: 'Failed to record vote', detail: voteError.message });
+    return res.status(500).json({ error: 'Failed to record vote' });
   }
 
   // Upsert ip_log
