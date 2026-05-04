@@ -49,7 +49,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     .insert({ choice, country, ip_hash: ipHash });
 
   if (voteError) {
-    return res.status(500).json({ error: 'Failed to record vote' });
+    console.error('vote insert error:', voteError);
+    return res.status(500).json({ error: 'Failed to record vote', detail: voteError.message });
   }
 
   // Upsert ip_log
