@@ -1,10 +1,11 @@
-interface Props {
+interface ResultBarProps {
   redPct: number;
   bluePct: number;
   total: number;
+  live?: boolean;
 }
 
-export default function ResultBar({ redPct, bluePct, total }: Props) {
+function ResultBar({ redPct, bluePct, total, live }: ResultBarProps) {
   return (
     <div className="result-bar-section">
       <div className="result-bar">
@@ -18,10 +19,19 @@ export default function ResultBar({ redPct, bluePct, total }: Props) {
         />
       </div>
       <div className="result-bar__labels">
-        <span className="result-bar__pct result-bar__pct--red">{redPct}% RED</span>
-        <span className="result-bar__total">{total.toLocaleString()} votes</span>
-        <span className="result-bar__pct result-bar__pct--blue">{bluePct}% BLUE</span>
+        <span className="result-bar__pct result-bar__pct--red">
+          {redPct}% RED
+        </span>
+        <span className="result-bar__total">
+          {live && <span className="live-dot" aria-hidden="true" />}
+          {total.toLocaleString()} votes
+        </span>
+        <span className="result-bar__pct result-bar__pct--blue">
+          {bluePct}% BLUE
+        </span>
       </div>
     </div>
   );
 }
+
+export default ResultBar;

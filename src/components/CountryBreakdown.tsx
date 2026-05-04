@@ -1,30 +1,11 @@
-import type { CountryResult } from '../types';
+import type { CountryResult } from "../types";
+import { countryFlag, countryName } from "../utils/countryUtils";
 
-interface Props {
+interface CountryBreakdownProps {
   countries: CountryResult[];
 }
 
-const displayNames = new Intl.DisplayNames(['en'], { type: 'region' });
-
-function countryFlag(code: string): string {
-  if (code === 'XX' || code.length !== 2) return '🌐';
-  return code
-    .toUpperCase()
-    .split('')
-    .map((c) => String.fromCodePoint(127397 + c.charCodeAt(0)))
-    .join('');
-}
-
-function countryName(code: string): string {
-  if (code === 'XX') return 'Unknown';
-  try {
-    return displayNames.of(code) ?? code;
-  } catch {
-    return code;
-  }
-}
-
-export default function CountryBreakdown({ countries }: Props) {
+function CountryBreakdown({ countries }: CountryBreakdownProps) {
   if (countries.length === 0) return null;
 
   return (
@@ -36,8 +17,12 @@ export default function CountryBreakdown({ countries }: Props) {
           const bluePct = 100 - redPct;
           return (
             <li key={c.country} className="country-row">
-              <span className="country-row__flag">{countryFlag(c.country)}</span>
-              <span className="country-row__name">{countryName(c.country)}</span>
+              <span className="country-row__flag">
+                {countryFlag(c.country)}
+              </span>
+              <span className="country-row__name">
+                {countryName(c.country)}
+              </span>
               <div className="country-row__bar">
                 <div
                   className="country-row__fill country-row__fill--red"
@@ -48,7 +33,9 @@ export default function CountryBreakdown({ countries }: Props) {
                   style={{ width: `${bluePct}%` }}
                 />
               </div>
-              <span className="country-row__votes">{c.total.toLocaleString()}</span>
+              <span className="country-row__votes">
+                {c.total.toLocaleString()}
+              </span>
             </li>
           );
         })}
@@ -56,3 +43,5 @@ export default function CountryBreakdown({ countries }: Props) {
     </div>
   );
 }
+
+export default CountryBreakdown;

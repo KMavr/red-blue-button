@@ -68,12 +68,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const redPct = total > 0 ? Math.round((red / total) * 100) : 50;
   const bluePct = 100 - redPct;
 
-  const survived =
-    total === 0
-      ? choice === 'blue'
-      : choice === 'blue'
-      ? blue >= red
-      : red > blue;
+  const blueMajority = blue >= red;
+  const survived = blueMajority ? true : choice === 'red';
 
   return res.status(200).json({
     survived,

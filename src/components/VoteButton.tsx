@@ -1,13 +1,13 @@
-import { useState } from 'react';
-import type { Choice } from '../types';
+import { useState } from "react";
+import type { Choice } from "../types";
 
-interface Props {
+interface VoteButtonProps {
   color: Choice;
   disabled: boolean;
   onVote: (choice: Choice) => void;
 }
 
-export default function VoteButton({ color, disabled, onVote }: Props) {
+function VoteButton({ color, disabled, onVote }: VoteButtonProps) {
   const [pressed, setPressed] = useState(false);
 
   function handleClick() {
@@ -16,11 +16,11 @@ export default function VoteButton({ color, disabled, onVote }: Props) {
     onVote(color);
   }
 
-  const label = color === 'red' ? 'RED' : 'BLUE';
+  const label = color === "red" ? "RED" : "BLUE";
 
   return (
     <button
-      className={`vote-btn vote-btn--${color}${pressed ? ' vote-btn--pressed' : ''}`}
+      className={`vote-btn vote-btn--${color}${pressed ? " vote-btn--pressed" : ""}`}
       onClick={handleClick}
       disabled={disabled || pressed}
       aria-label={`Press ${label} button`}
@@ -29,3 +29,5 @@ export default function VoteButton({ color, disabled, onVote }: Props) {
     </button>
   );
 }
+
+export default VoteButton;
