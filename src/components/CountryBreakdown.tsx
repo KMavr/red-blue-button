@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import type { CountryResult } from "../types";
 import { countryFlag, countryName } from "../utils/countryUtils";
 
@@ -6,6 +7,7 @@ interface CountryBreakdownProps {
 }
 
 function CountryBreakdown({ countries }: CountryBreakdownProps) {
+  const { i18n } = useTranslation();
   if (countries.length === 0) return null;
 
   return (
@@ -21,7 +23,7 @@ function CountryBreakdown({ countries }: CountryBreakdownProps) {
                 {countryFlag(c.country)}
               </span>
               <span className="country-row__name">
-                {countryName(c.country)}
+                {countryName(c.country, i18n.language)}
               </span>
               <div className="country-row__bar">
                 <div
