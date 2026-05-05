@@ -23,12 +23,12 @@ function ResultBar({ redPct, bluePct, total, live }: ResultBarProps) {
         />
       </div>
       <div className="result-bar__labels">
-        <span className="result-bar__pct result-bar__pct--red">{redPct}% RED</span>
+        <span className="result-bar__pct result-bar__pct--red">{redPct}% {t('landing-page.rules.red.label')}</span>
         <span className="result-bar__total">
           {live && <span className="live-dot" aria-hidden="true" />}
           {t('results-page.result-bar.votes', { count: total.toLocaleString() })}
         </span>
-        <span className="result-bar__pct result-bar__pct--blue">{bluePct}% BLUE</span>
+        <span className="result-bar__pct result-bar__pct--blue">{bluePct}% {t('landing-page.rules.blue.label')}</span>
       </div>
     </div>
   );
