@@ -1,18 +1,20 @@
-import { useState } from "react";
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
-const SITE_URL = "https://red-blue-button.vercel.app";
+const SITE_URL = 'https://red-blue-button.vercel.app';
 
 export function useShare(survived: boolean | null) {
+  const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
 
   function share() {
-    const outcome = survived ? "survived" : "died";
-    const text = `I just pressed a button and ${outcome}. What would you press?\n\n${SITE_URL}`;
+    const key = survived
+      ? 'results-page.share.text.survived'
+      : 'results-page.share.text.died';
+    const text = t(key, { url: SITE_URL });
 
     if (navigator.share) {
-      navigator
-        .share({ title: "Red or Blue?", text, url: SITE_URL })
-        .catch(() => {});
+      navigator.share({ title: t('landing-page.header'), text, url: SITE_URL }).catch(() => {});
     } else {
       navigator.clipboard.writeText(text).then(() => {
         setCopied(true);

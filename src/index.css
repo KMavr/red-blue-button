@@ -31,6 +31,50 @@ body {
   min-height: 100vh;
 }
 
+/* ── Language selector ── */
+
+.lang-selector {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+}
+
+.lang-selector__select {
+  appearance: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-muted);
+  font-family: var(--font);
+  font-size: 0.75rem;
+  padding: 0.4rem 2rem 0.4rem 0.75rem;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%237070a0' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.lang-selector__select:hover,
+.lang-selector__select:focus {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--text);
+  outline: none;
+}
+
+@media (max-width: 480px) {
+  .lang-selector {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .lang-selector__select {
+    font-size: 0.7rem;
+    padding: 0.35rem 1.75rem 0.35rem 0.6rem;
+  }
+}
+
 /* ── Landing ── */
 
 .landing {

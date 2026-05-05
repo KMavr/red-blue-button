@@ -1,16 +1,18 @@
+import { useTranslation } from "react-i18next";
 import ResultBar from "../components/ResultBar";
 import CountryBreakdown from "../components/CountryBreakdown";
 import { useResults } from "../hooks/useResults";
 import { useShare } from "../hooks/useShare";
 
 function ResultsPage() {
+  const { t } = useTranslation();
   const { results, loading, live, majority, survived } = useResults();
   const { copied, share } = useShare(survived);
 
   if (loading) {
     return (
       <div className="results results--loading">
-        <p>Counting votes…</p>
+        <p>{t("results-page.loading")}</p>
       </div>
     );
   }
@@ -18,7 +20,7 @@ function ResultsPage() {
   if (!results) {
     return (
       <div className="results results--error">
-        <p>Failed to load results.</p>
+        <p>{t("results-page.error")}</p>
       </div>
     );
   }
@@ -39,21 +41,21 @@ function ResultsPage() {
               <>
                 <span className="results__outcome-icon">◉</span>
                 <h1 className="results__verdict results__verdict--survived">
-                  YOU SURVIVED
+                  {t("results-page.outcome.survived")}
                 </h1>
               </>
             ) : (
               <>
                 <span className="results__outcome-icon">✕</span>
                 <h1 className="results__verdict results__verdict--died">
-                  YOU DIED
+                  {t("results-page.outcome.died")}
                 </h1>
               </>
             )}
             <p className="results__outcome-sub">
               {majority === "blue"
-                ? "Blue holds the majority — humanity lives."
-                : "Red holds the majority — only the red survive."}
+                ? t("results-page.outcome.sub.blue-majority")
+                : t("results-page.outcome.sub.red-majority")}
             </p>
           </div>
         )}
@@ -66,7 +68,9 @@ function ResultsPage() {
         />
 
         <button className="share-btn" onClick={share}>
-          {copied ? "Copied!" : "Share this dilemma"}
+          {copied
+            ? t("results-page.share-button.copied")
+            : t("results-page.share-button.text")}
         </button>
 
         <CountryBreakdown countries={results.countries} />

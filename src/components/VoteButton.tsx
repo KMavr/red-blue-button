@@ -1,5 +1,6 @@
-import { useState } from "react";
-import type { Choice } from "../types";
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import type { Choice } from '../types';
 
 interface VoteButtonProps {
   color: Choice;
@@ -8,6 +9,7 @@ interface VoteButtonProps {
 }
 
 function VoteButton({ color, disabled, onVote }: VoteButtonProps) {
+  const { t } = useTranslation();
   const [pressed, setPressed] = useState(false);
 
   function handleClick() {
@@ -16,14 +18,15 @@ function VoteButton({ color, disabled, onVote }: VoteButtonProps) {
     onVote(color);
   }
 
-  const label = color === "red" ? "RED" : "BLUE";
+  const key = color === 'red' ? 'landing-page.vote-button.red.label' : 'landing-page.vote-button.blue.label';
+  const label = t(key);
 
   return (
     <button
-      className={`vote-btn vote-btn--${color}${pressed ? " vote-btn--pressed" : ""}`}
+      className={`vote-btn vote-btn--${color}${pressed ? ' vote-btn--pressed' : ''}`}
       onClick={handleClick}
       disabled={disabled || pressed}
-      aria-label={`Press ${label} button`}
+      aria-label={label}
     >
       <span className="vote-btn__label">{label}</span>
     </button>
