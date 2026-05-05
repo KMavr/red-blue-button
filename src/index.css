@@ -219,7 +219,6 @@ body {
 }
 
 .vote-btn--red:hover:not(:disabled) {
-  transform: scale(1.06);
   box-shadow: 0 0 60px var(--red-glow), 0 0 120px rgba(220, 38, 38, 0.3), inset 0 1px 0 rgba(255,255,255,0.2);
 }
 
@@ -230,12 +229,7 @@ body {
 }
 
 .vote-btn--blue:hover:not(:disabled) {
-  transform: scale(1.06);
   box-shadow: 0 0 60px var(--blue-glow), 0 0 120px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255,255,255,0.2);
-}
-
-.vote-btn--pressed {
-  transform: scale(0.94) !important;
 }
 
 .vote-btn__label {

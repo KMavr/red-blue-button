@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import type { Choice } from '../types';
 
 interface VoteButtonProps {
@@ -22,14 +23,18 @@ function VoteButton({ color, disabled, onVote }: VoteButtonProps) {
   const label = t(key);
 
   return (
-    <button
-      className={`vote-btn vote-btn--${color}${pressed ? ' vote-btn--pressed' : ''}`}
+    <motion.button
+      className={`vote-btn vote-btn--${color}`}
       onClick={handleClick}
       disabled={disabled || pressed}
       aria-label={label}
+      whileHover={!disabled && !pressed ? { scale: 1.06 } : {}}
+      whileTap={!disabled && !pressed ? { scale: 0.94 } : {}}
+      animate={pressed ? { scale: [0.94, 1.08, 1] } : {}}
+      transition={{ duration: 0.35, ease: 'easeOut' }}
     >
       <span className="vote-btn__label">{label}</span>
-    </button>
+    </motion.button>
   );
 }
 
