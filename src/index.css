@@ -497,6 +497,81 @@ body {
   text-align: right;
 }
 
+/* ── Footer ── */
+
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.site-footer a {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.site-footer a:hover {
+  color: var(--text);
+}
+
+/* ── Privacy page ── */
+
+.privacy {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 1.25rem;
+}
+
+.privacy__content {
+  max-width: 640px;
+  width: 100%;
+}
+
+.privacy__content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.privacy__updated {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.privacy__content h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.privacy__content p,
+.privacy__content li {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.privacy__content ul {
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.privacy__content a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.privacy__content a:hover {
+  text-decoration: underline;
+}
+
 /* ── Responsive ── */
 
 @media (max-width: 480px) {
