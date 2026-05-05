@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import type { Choice, Results } from "../types";
 import { deriveSurvived } from "../utils/resultsUtils";
@@ -13,6 +13,7 @@ interface LocationState {
 const POLL_INTERVAL = 5000;
 
 export function useResults() {
+  const navigate = useNavigate();
   const { state } = useLocation() as { state: LocationState | null };
   const [results, setResults] = useState<Results | null>(
     state?.results ?? null,
@@ -24,6 +25,11 @@ export function useResults() {
     state?.choice ?? (Cookies.get("last_choice") as Choice | undefined);
 
   useEffect(() => {
+    if (!Cookies.get("voted")) {
+      navigate("/", { replace: true });
+      return;
+    }
+
     async function fetchResults() {
       const data = await fetch("/api/results").then((r) => r.json());
       setResults(data);
@@ -35,7 +41,7 @@ export function useResults() {
 
     const id = setInterval(fetchResults, POLL_INTERVAL);
     return () => clearInterval(id);
-  }, [state]);
+  }, [navigate, state]);
 
   let majority: "blue" | "red" | null = null;
   if (results) majority = results.blue >= results.red ? "blue" : "red";
