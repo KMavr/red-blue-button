@@ -572,6 +572,50 @@ body {
   text-decoration: underline;
 }
 
+/* ── RTL (Arabic) ── */
+
+[dir="rtl"] .landing__rules {
+  text-align: right;
+}
+
+[dir="rtl"] .landing__rule--red {
+  border-left: none;
+  border-right: 3px solid var(--red);
+}
+
+[dir="rtl"] .landing__rule--blue {
+  border-left: none;
+  border-right: 3px solid var(--blue);
+}
+
+[dir="rtl"] .landing__eyebrow,
+[dir="rtl"] .landing__rule-label,
+[dir="rtl"] .country-breakdown__title {
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 0.85rem;
+}
+
+[dir="rtl"] .landing__eyebrow {
+  font-size: 0.9rem;
+}
+
+[dir="rtl"] .result-bar__labels {
+  direction: rtl;
+}
+
+[dir="rtl"] .lang-selector {
+  right: auto;
+  left: 1rem;
+}
+
+@media (max-width: 480px) {
+  [dir="rtl"] .lang-selector {
+    right: auto;
+    left: 0.75rem;
+  }
+}
+
 /* ── Responsive ── */
 
 @media (max-width: 480px) {

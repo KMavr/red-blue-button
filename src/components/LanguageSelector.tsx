@@ -1,4 +1,7 @@
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+
+const RTL_LANGUAGES = new Set(['ar']);
 
 const LANGUAGES = [
   { code: 'en', label: 'English' },
@@ -19,6 +22,12 @@ function LanguageSelector() {
   const { i18n } = useTranslation();
 
   const currentCode = i18n.language.split('-')[0];
+
+  useEffect(() => {
+    const dir = RTL_LANGUAGES.has(currentCode) ? 'rtl' : 'ltr';
+    document.documentElement.dir = dir;
+    document.documentElement.lang = currentCode;
+  }, [currentCode]);
 
   function handleChange(e: React.ChangeEvent<HTMLSelectElement>) {
     i18n.changeLanguage(e.target.value);
