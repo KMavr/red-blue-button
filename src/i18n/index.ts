@@ -12,6 +12,8 @@ import it from '../../translations/it.json';
 import ja from '../../translations/ja.json';
 import ko from '../../translations/ko.json';
 import zh from '../../translations/zh.json';
+import ru from '../../translations/ru.json';
+import ar from '../../translations/ar.json';
 
 i18n
   .use(LanguageDetector)
@@ -29,6 +31,8 @@ i18n
       ja: { translation: ja },
       ko: { translation: ko },
       zh: { translation: zh },
+      ru: { translation: ru },
+      ar: { translation: ar },
     },
     interpolation: { escapeValue: false },
   });

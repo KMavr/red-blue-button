@@ -11,6 +11,8 @@ const LANGUAGES = [
   { code: 'ja', label: '日本語' },
   { code: 'ko', label: '한국어' },
   { code: 'zh', label: '中文' },
+  { code: 'ru', label: 'Русский' },
+  { code: 'ar', label: 'العربية' },
 ];
 
 function LanguageSelector() {
