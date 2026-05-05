@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-const SITE_URL = 'https://red-blue-button.vercel.app';
+const SITE_URL = 'https://redor.blue';
 
 export function useShare(survived: boolean | null) {
   const { t } = useTranslation();
