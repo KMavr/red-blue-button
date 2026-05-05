@@ -5,7 +5,7 @@ import { useShare } from "../hooks/useShare";
 
 function ResultsPage() {
   const { results, loading, live, majority, survived } = useResults();
-  const { copied, share } = useShare(survived, results?.bluePct ?? 50);
+  const { copied, share } = useShare(survived);
 
   if (loading) {
     return (
