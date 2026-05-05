@@ -14,7 +14,7 @@ export function useShare(survived: boolean | null) {
     const text = t(key, { url: SITE_URL });
 
     if (navigator.share) {
-      navigator.share({ title: t('landing-page.header'), text, url: SITE_URL }).catch(() => {});
+      navigator.share({ title: t('landing-page.header'), text }).catch(() => {});
     } else {
       navigator.clipboard.writeText(text).then(() => {
         setCopied(true);
