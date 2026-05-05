@@ -15,6 +15,7 @@ export default function App() {
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <footer className="site-footer">
+        <span className="site-footer__copy">© 2026 redor.blue</span>
         <Link to="/privacy">Privacy Policy</Link>
       </footer>
     </BrowserRouter>

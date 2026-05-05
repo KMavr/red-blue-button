@@ -3,7 +3,7 @@ function PrivacyPage() {
     <div className="privacy">
       <div className="privacy__content">
         <h1>Privacy Policy</h1>
-        <p className="privacy__updated">Last updated: May 5, 2025</p>
+        <p className="privacy__updated">Last updated: May 5, 2026</p>
 
         <p>This privacy policy describes how redor.blue ("we", "us") handles information when you use our website.</p>
 
