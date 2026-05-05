@@ -1,10 +1,31 @@
+import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { animate } from 'framer-motion';
 import VoteButton from '../components/VoteButton';
 import { useVote } from '../hooks/useVote';
+import { useLandingStats } from '../hooks/useLandingStats';
 
 function LandingPage() {
   const { t } = useTranslation();
   const { voting, error, submit } = useVote();
+  const { total } = useLandingStats();
+  const countRef = useRef<HTMLSpanElement>(null);
+  const displayedTotal = useRef(0);
+
+  useEffect(() => {
+    if (total === null || !countRef.current) return;
+    const node = countRef.current;
+    const from = displayedTotal.current;
+    const to = total;
+    animate(from, to, {
+      duration: 1,
+      ease: 'easeOut',
+      onUpdate(v) {
+        node.textContent = Math.round(v).toLocaleString();
+      },
+    });
+    displayedTotal.current = to;
+  }, [total]);
 
   return (
     <div className="landing">
@@ -37,6 +58,14 @@ function LandingPage() {
         </p>
 
         <p className="landing__cta">{t('landing-page.cta')}</p>
+
+        {total !== null && (
+          <p className="landing__live-count">
+            <span className="live-dot" aria-hidden="true" />
+            <span ref={countRef}>{total.toLocaleString()}</span>
+            {' '}{t('landing-page.live-count')}
+          </p>
+        )}
 
         {error && <p className="landing__error">{error}</p>}
 

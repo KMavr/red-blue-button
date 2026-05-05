@@ -25,5 +25,6 @@
   "results-page.country-breakdown.title": "국가별",
   "results-page.result-bar.votes": "{{count}}표",
   "results-page.share.text.survived": "방금 버튼을 눌렀고 살아남았습니다. 당신이라면 어떤 버튼을 누르겠습니까?\n\n{{url}}",
-  "results-page.share.text.died": "방금 버튼을 눌렀고 죽었습니다. 당신이라면 어떤 버튼을 누르겠습니까?\n\n{{url}}"
+  "results-page.share.text.died": "방금 버튼을 눌렀고 죽었습니다. 당신이라면 어떤 버튼을 누르겠습니까?\n\n{{url}}",
+  "landing-page.live-count": "명이 이미 선택했습니다"
 }

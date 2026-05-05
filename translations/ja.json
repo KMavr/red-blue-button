@@ -25,5 +25,6 @@
   "results-page.country-breakdown.title": "国別",
   "results-page.result-bar.votes": "{{count}}票",
   "results-page.share.text.survived": "ボタンを押して生き残りました。あなたならどちらを押しますか？\n\n{{url}}",
-  "results-page.share.text.died": "ボタンを押して死にました。あなたならどちらを押しますか？\n\n{{url}}"
+  "results-page.share.text.died": "ボタンを押して死にました。あなたならどちらを押しますか？\n\n{{url}}",
+  "landing-page.live-count": "人がすでに選択しました"
 }

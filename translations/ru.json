@@ -25,5 +25,6 @@
   "results-page.country-breakdown.title": "По странам",
   "results-page.result-bar.votes": "{{count}} голосов",
   "results-page.share.text.survived": "Я нажал кнопку и выжил. Что нажали бы вы?\n\n{{url}}",
-  "results-page.share.text.died": "Я нажал кнопку и погиб. Что нажали бы вы?\n\n{{url}}"
+  "results-page.share.text.died": "Я нажал кнопку и погиб. Что нажали бы вы?\n\n{{url}}",
+  "landing-page.live-count": "человек уже сделали выбор"
 }

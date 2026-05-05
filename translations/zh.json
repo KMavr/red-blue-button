@@ -25,5 +25,6 @@
   "results-page.country-breakdown.title": "按国家",
   "results-page.result-bar.votes": "{{count}} 票",
   "results-page.share.text.survived": "我刚刚按下了一个按钮并活了下来。你会按哪个？\n\n{{url}}",
-  "results-page.share.text.died": "我刚刚按下了一个按钮然后死了。你会按哪个？\n\n{{url}}"
+  "results-page.share.text.died": "我刚刚按下了一个按钮然后死了。你会按哪个？\n\n{{url}}",
+  "landing-page.live-count": "人已经做出了选择"
 }

@@ -173,6 +173,16 @@ body {
   margin-bottom: 2.5rem;
 }
 
+.landing__live-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
 .landing__error {
   color: var(--red);
   font-size: 0.875rem;

@@ -25,5 +25,6 @@
   "results-page.country-breakdown.title": "Ανά χώρα",
   "results-page.result-bar.votes": "{{count}} ψήφοι",
   "results-page.share.text.survived": "Μόλις πάτησα ένα κουμπί και επιβίωσα. Εσύ τι θα πάτaγες;\n\n{{url}}",
-  "results-page.share.text.died": "Μόλις πάτησα ένα κουμπί και πέθανα. Εσύ τι θα πάτaγες;\n\n{{url}}"
+  "results-page.share.text.died": "Μόλις πάτησα ένα κουμπί και πέθανα. Εσύ τι θα πάτaγες;\n\n{{url}}",
+  "landing-page.live-count": "άνθρωποι έχουν ήδη επιλέξει"
 }

@@ -25,5 +25,6 @@
   "results-page.country-breakdown.title": "Por país",
   "results-page.result-bar.votes": "{{count}} votos",
   "results-page.share.text.survived": "Acabo de presionar un botón y sobreviví. ¿Cuál elegirías?\n\n{{url}}",
-  "results-page.share.text.died": "Acabo de presionar un botón y morí. ¿Cuál elegirías?\n\n{{url}}"
+  "results-page.share.text.died": "Acabo de presionar un botón y morí. ¿Cuál elegirías?\n\n{{url}}",
+  "landing-page.live-count": "personas ya han elegido"
 }

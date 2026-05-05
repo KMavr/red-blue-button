@@ -25,5 +25,6 @@
   "results-page.country-breakdown.title": "By Country",
   "results-page.result-bar.votes": "{{count}} votes",
   "results-page.share.text.survived": "I just pressed a button and survived. What would you press?\n\n{{url}}",
-  "results-page.share.text.died": "I just pressed a button and died. What would you press?\n\n{{url}}"
+  "results-page.share.text.died": "I just pressed a button and died. What would you press?\n\n{{url}}",
+  "landing-page.live-count": "people have already chosen"
 }

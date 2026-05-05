@@ -25,5 +25,6 @@
   "results-page.country-breakdown.title": "حسب الدولة",
   "results-page.result-bar.votes": "{{count}} صوت",
   "results-page.share.text.survived": "ضغطت زراراً ونجوت. ماذا كنت ستضغط؟\n\n{{url}}",
-  "results-page.share.text.died": "ضغطت زراراً ومُتُّ. ماذا كنت ستضغط؟\n\n{{url}}"
+  "results-page.share.text.died": "ضغطت زراراً ومُتُّ. ماذا كنت ستضغط؟\n\n{{url}}",
+  "landing-page.live-count": "شخص اختار بالفعل"
 }

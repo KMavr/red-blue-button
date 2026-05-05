@@ -25,5 +25,6 @@
   "results-page.country-breakdown.title": "Nach Land",
   "results-page.result-bar.votes": "{{count}} Stimmen",
   "results-page.share.text.survived": "Ich habe gerade einen Knopf gedrückt und überlebt. Was würdest du drücken?\n\n{{url}}",
-  "results-page.share.text.died": "Ich habe gerade einen Knopf gedrückt und bin gestorben. Was würdest du drücken?\n\n{{url}}"
+  "results-page.share.text.died": "Ich habe gerade einen Knopf gedrückt und bin gestorben. Was würdest du drücken?\n\n{{url}}",
+  "landing-page.live-count": "Menschen haben bereits gewählt"
 }
