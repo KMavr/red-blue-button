@@ -25,15 +25,19 @@ function CountryBreakdown({ countries }: CountryBreakdownProps) {
               <span className="country-row__name">
                 {countryName(c.country, i18n.language)}
               </span>
-              <div className="country-row__bar">
-                <div
-                  className="country-row__fill country-row__fill--red"
-                  style={{ width: `${redPct}%` }}
-                />
-                <div
-                  className="country-row__fill country-row__fill--blue"
-                  style={{ width: `${bluePct}%` }}
-                />
+              <div className="country-row__bar-section">
+                <span className="country-row__pct country-row__pct--red">{redPct}%</span>
+                <div className="country-row__bar">
+                  <div
+                    className="country-row__fill country-row__fill--red"
+                    style={{ width: `${redPct}%` }}
+                  />
+                  <div
+                    className="country-row__fill country-row__fill--blue"
+                    style={{ width: `${bluePct}%` }}
+                  />
+                </div>
+                <span className="country-row__pct country-row__pct--blue">{bluePct}%</span>
               </div>
               <span className="country-row__votes">
                 {c.total.toLocaleString()}
