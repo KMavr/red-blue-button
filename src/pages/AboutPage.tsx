@@ -7,6 +7,7 @@ function AboutPage() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.inner}>
+        <Link to="/" className={styles.back}>← Back</Link>
         <h1 className={styles.h1}>{t("about-page.h1")}</h1>
         <p className={styles.subtitle}>{t("about-page.subtitle")}</p>
 
@@ -81,6 +82,7 @@ const styles = {
   red: cn("text-red font-semibold"),
   blue: cn("text-blue font-semibold"),
   link: cn("text-blue no-underline hover:underline"),
+  back: cn("inline-block text-secondary text-[0.85rem] no-underline hover:text-primary mb-6"),
   whyLinks: cn("flex gap-6 mt-8 mb-2"),
   blueLink: cn("text-blue font-semibold text-[0.9rem] no-underline hover:underline"),
   redLink: cn("text-red font-semibold text-[0.9rem] no-underline hover:underline"),

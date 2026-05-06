@@ -7,6 +7,7 @@ function WhyBluePage() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.inner}>
+        <Link to="/" className={styles.back}>← Back</Link>
         <h1 className={styles.h1}>{t("why-blue-page.h1")}</h1>
         <p className={styles.subtitle}>{t("why-blue-page.subtitle")}</p>
 
@@ -44,6 +45,7 @@ const styles = {
   subtitle: cn("text-secondary text-[0.8rem] mb-8"),
   h2: cn("text-base font-bold mt-8 mb-2 tracking-[0.02em]"),
   body: cn("text-[0.9rem] leading-[1.7] text-secondary mb-2"),
+  back: cn("inline-block text-secondary text-[0.85rem] no-underline hover:text-primary mb-6"),
   nav: cn("flex justify-between mt-10"),
   mutedLink: cn("text-secondary text-[0.85rem] no-underline hover:text-primary"),
   redLink: cn("text-red font-semibold text-[0.85rem] no-underline hover:underline"),
