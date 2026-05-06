@@ -14,7 +14,6 @@
   "landing-page.error.generic": "문제가 발생했습니다. 다시 시도해 주세요.",
   "landing-page.error.network": "네트워크 오류. 다시 시도해 주세요.",
   "landing-page.live-count": "명이 이미 선택했습니다",
-
   "results-page.loading": "투표를 집계하는 중…",
   "results-page.error": "결과를 불러오지 못했습니다.",
   "results-page.outcome.survived": "당신은 살아남았습니다",
@@ -27,7 +26,6 @@
   "results-page.result-bar.votes": "{{count}}표",
   "results-page.share.text.survived": "방금 버튼을 눌렀고 살아남았습니다. 당신이라면 어떤 버튼을 누르겠습니까?\n\n{{url}}",
   "results-page.share.text.died": "방금 버튼을 눌렀고 죽었습니다. 당신이라면 어떤 버튼을 누르겠습니까?\n\n{{url}}",
-
   "about-page.h1": "이 딜레마",
   "about-page.subtitle": "왜 이 질문은 생각보다 더 어려운가",
   "about-page.intro": "이것은 단순한 투표가 아닙니다. 실제 결과를 수반하는 사고 실험이며, 게임 이론에서 가장 많이 연구된 문제 중 하나인 ‘조정 게임’의 실시간 버전입니다.",
@@ -51,7 +49,6 @@
   "about-page.reading.h2": "추가 읽을거리",
   "about-page.reading.link1-label": "Buttons, Blenders, and Coordination — Good Thoughts",
   "about-page.reading.link2-label": "What a viral question tells us about game theory — The Conversation",
-
   "why-blue-page.h1": "왜 파란색인가",
   "why-blue-page.subtitle": "협력을 선택하는 이유",
   "why-blue-page.intro": "파란색은 더 어려운 선택입니다. 수십억 명의 낯선 사람을 신뢰해야 합니다.",
@@ -68,7 +65,6 @@
   "why-blue-page.schelling.body": "의사소통 없이 사람들이 자연스럽게 모이는 선택입니다.",
   "why-blue-page.nav.about": "← 이 딜레마",
   "why-blue-page.nav.red": "왜 빨간색인가? →",
-
   "why-red-page.h1": "왜 빨간색인가",
   "why-red-page.subtitle": "자기 보존의 선택",
   "why-red-page.intro": "빨간색은 이기적으로 보일 수 있지만, 그 논리는 명확합니다.",
@@ -86,7 +82,6 @@
   "why-red-page.distrust.body": "현실 세계에서 협력은 항상 성공하지 않습니다.",
   "why-red-page.nav.blue": "← 왜 파란색인가?",
   "why-red-page.nav.about": "이 딜레마 →",
-
   "privacy-page.h1": "개인정보 처리방침",
   "privacy-page.subtitle": "최종 업데이트: 2026년 5월 5일",
   "privacy-page.intro": "이 정책은 당사가 정보를 어떻게 처리하는지 설명합니다.",
@@ -103,7 +98,7 @@
   "privacy-page.cookies.choice-text": "선택을 기억",
   "privacy-page.cookies.outro": "개인 정보는 포함되지 않습니다.",
   "privacy-page.adsense.h2": "Google AdSense",
-  "privacy-page.adsense.body": "광고 표시를 위해 사용됩니다.",
+  "privacy-page.adsense.body": "당사는 광고 표시를 위해 Google AdSense를 사용합니다. Google은 맞춤형 광고를 위해 쿠키를 사용하고 데이터를 수집할 수 있습니다. 이는 <googlePrivacy>Google 개인정보처리방침</googlePrivacy>에 따라 규율됩니다. <adSettings>Google 광고 설정</adSettings>에서 맞춤 광고를 해제할 수 있습니다.",
   "privacy-page.sharing.h2": "데이터 공유",
   "privacy-page.sharing.body": "데이터를 판매하거나 공유하지 않습니다.",
   "privacy-page.retention.h2": "데이터 보관",

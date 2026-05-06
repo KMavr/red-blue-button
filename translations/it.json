@@ -14,7 +14,6 @@
   "landing-page.error.generic": "Qualcosa è andato storto. Riprova.",
   "landing-page.error.network": "Errore di rete. Riprova.",
   "landing-page.live-count": "persone hanno già scelto",
-
   "results-page.loading": "Conteggio voti…",
   "results-page.error": "Impossibile caricare i risultati.",
   "results-page.outcome.survived": "SEI SOPRAVVISSUTO",
@@ -27,7 +26,6 @@
   "results-page.result-bar.votes": "{{count}} voti",
   "results-page.share.text.survived": "Ho appena premuto un pulsante e sono sopravvissuto. Quale premeresti?\n\n{{url}}",
   "results-page.share.text.died": "Ho appena premuto un pulsante e sono morto. Quale premeresti?\n\n{{url}}",
-
   "about-page.h1": "Il dilemma",
   "about-page.subtitle": "Perché questa domanda è più difficile di quanto sembri",
   "about-page.intro": "Questo non è un sondaggio. È un esperimento mentale con conseguenze reali — una versione dal vivo di uno dei problemi più studiati nella teoria dei giochi: il gioco di coordinamento.",
@@ -51,7 +49,6 @@
   "about-page.reading.h2": "Letture aggiuntive",
   "about-page.reading.link1-label": "Buttons, Blenders, and Coordination — Good Thoughts",
   "about-page.reading.link2-label": "What a viral question tells us about game theory — The Conversation",
-
   "why-blue-page.h1": "Perché blu",
   "why-blue-page.subtitle": "L’argomento a favore della cooperazione",
   "why-blue-page.intro": "Il blu è la scelta più difficile. Richiede fiducia in miliardi di sconosciuti senza garanzie.",
@@ -68,7 +65,6 @@
   "why-blue-page.schelling.body": "Un punto di Schelling è una soluzione a cui le persone convergono senza comunicazione.",
   "why-blue-page.nav.about": "← Il dilemma",
   "why-blue-page.nav.red": "Perché rosso? →",
-
   "why-red-page.h1": "Perché rosso",
   "why-red-page.subtitle": "L’argomento a favore dell’autoconservazione",
   "why-red-page.intro": "Il rosso può sembrare egoista, ma la sua logica è precisa.",
@@ -86,7 +82,6 @@
   "why-red-page.distrust.body": "Gli esempi reali mostrano che la cooperazione spesso fallisce.",
   "why-red-page.nav.blue": "← Perché blu?",
   "why-red-page.nav.about": "Il dilemma →",
-
   "privacy-page.h1": "Informativa sulla privacy",
   "privacy-page.subtitle": "Ultimo aggiornamento: 5 maggio 2026",
   "privacy-page.intro": "Questa informativa descrive come gestiamo le informazioni.",
@@ -103,7 +98,7 @@
   "privacy-page.cookies.choice-text": "ricorda la tua scelta",
   "privacy-page.cookies.outro": "Non contengono dati personali.",
   "privacy-page.adsense.h2": "Google AdSense",
-  "privacy-page.adsense.body": "Utilizziamo Google AdSense per mostrare annunci.",
+  "privacy-page.adsense.body": "Utilizziamo Google AdSense per mostrare annunci. Google può utilizzare cookie e raccogliere dati per mostrare annunci personalizzati. Questo è regolato dalla <googlePrivacy>Informativa sulla privacy di Google</googlePrivacy>. Puoi disattivare la pubblicità personalizzata nelle <adSettings>Impostazioni annunci di Google</adSettings>.",
   "privacy-page.sharing.h2": "Condivisione dei dati",
   "privacy-page.sharing.body": "Non vendiamo né condividiamo dati.",
   "privacy-page.retention.h2": "Conservazione dei dati",

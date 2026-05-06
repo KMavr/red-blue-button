@@ -14,7 +14,6 @@
   "landing-page.error.generic": "حدث خطأ ما. حاول مجدداً.",
   "landing-page.error.network": "خطأ في الشبكة. حاول مجدداً.",
   "landing-page.live-count": "شخص اختار بالفعل",
-
   "results-page.loading": "جارٍ احتساب الأصوات…",
   "results-page.error": "تعذّر تحميل النتائج.",
   "results-page.outcome.survived": "لقد نجوت",
@@ -27,7 +26,6 @@
   "results-page.result-bar.votes": "{{count}} صوت",
   "results-page.share.text.survived": "ضغطت زراراً ونجوت. ماذا كنت ستضغط؟\n\n{{url}}",
   "results-page.share.text.died": "ضغطت زراراً ومُتُّ. ماذا كنت ستضغط؟\n\n{{url}}",
-
   "about-page.h1": "المعضلة",
   "about-page.subtitle": "لماذا هذا السؤال أصعب مما يبدو",
   "about-page.intro": "هذا ليس استطلاعاً. إنه تجربة فكرية ذات عواقب حقيقية — نسخة حيّة من واحدة من أكثر المسائل دراسةً في نظرية الألعاب: لعبة التنسيق.",
@@ -51,7 +49,6 @@
   "about-page.reading.h2": "قراءات إضافية",
   "about-page.reading.link1-label": "Buttons, Blenders, and Coordination — Good Thoughts",
   "about-page.reading.link2-label": "What a viral question tells us about game theory — The Conversation",
-
   "why-blue-page.h1": "لماذا الأزرق",
   "why-blue-page.subtitle": "الحجة لصالح التعاون",
   "why-blue-page.intro": "الأزرق هو الخيار الأصعب. يتطلب الثقة في مليارات الغرباء دون ضمان.",
@@ -68,7 +65,6 @@
   "why-blue-page.schelling.body": "ما يسمى نقطة شيلينغ — خيار يتفق عليه الناس دون تواصل.",
   "why-blue-page.nav.about": "← المعضلة",
   "why-blue-page.nav.red": "لماذا الأحمر؟ →",
-
   "why-red-page.h1": "لماذا الأحمر",
   "why-red-page.subtitle": "الحجة لصالح حماية الذات",
   "why-red-page.intro": "الأحمر يبدو أنانياً، لكن منطقه واضح.",
@@ -86,7 +82,6 @@
   "why-red-page.distrust.body": "التجارب الواقعية تُظهر أن التعاون ليس مضموناً.",
   "why-red-page.nav.blue": "← لماذا الأزرق؟",
   "why-red-page.nav.about": "المعضلة →",
-
   "privacy-page.h1": "سياسة الخصوصية",
   "privacy-page.subtitle": "آخر تحديث: 5 مايو 2026",
   "privacy-page.intro": "توضح هذه السياسة كيفية تعاملنا مع البيانات.",
@@ -103,7 +98,7 @@
   "privacy-page.cookies.choice-text": "يتذكر اختيارك",
   "privacy-page.cookies.outro": "لا تحتوي على معلومات شخصية.",
   "privacy-page.adsense.h2": "Google AdSense",
-  "privacy-page.adsense.body": "نستخدم Google AdSense لعرض الإعلانات.",
+  "privacy-page.adsense.body": "نستخدم Google AdSense لعرض الإعلانات. قد تستخدم Google ملفات تعريف الارتباط وتجمع بيانات لعرض إعلانات مخصصة. يخضع ذلك لـ<googlePrivacy>سياسة خصوصية Google</googlePrivacy>. يمكنك إلغاء الاشتراك في الإعلانات المخصصة عبر <adSettings>إعدادات الإعلانات</adSettings>.",
   "privacy-page.sharing.h2": "مشاركة البيانات",
   "privacy-page.sharing.body": "لا نبيع أو نشارك البيانات.",
   "privacy-page.retention.h2": "الاحتفاظ بالبيانات",

@@ -14,7 +14,6 @@
   "landing-page.error.generic": "Etwas ist schiefgelaufen. Versuche es erneut.",
   "landing-page.error.network": "Netzwerkfehler. Versuche es erneut.",
   "landing-page.live-count": "Menschen haben bereits gewählt",
-
   "results-page.loading": "Stimmen werden gezählt…",
   "results-page.error": "Ergebnisse konnten nicht geladen werden.",
   "results-page.outcome.survived": "DU HAST ÜBERLEBT",
@@ -27,7 +26,6 @@
   "results-page.result-bar.votes": "{{count}} Stimmen",
   "results-page.share.text.survived": "Ich habe gerade einen Knopf gedrückt und überlebt. Was würdest du drücken?\n\n{{url}}",
   "results-page.share.text.died": "Ich habe gerade einen Knopf gedrückt und bin gestorben. Was würdest du drücken?\n\n{{url}}",
-
   "about-page.h1": "Das Dilemma",
   "about-page.subtitle": "Warum diese Frage schwieriger ist, als sie aussieht",
   "about-page.intro": "Das ist keine Umfrage. Es ist ein Gedankenexperiment mit realen Konsequenzen — eine Live-Version eines der am meisten untersuchten Probleme der Spieltheorie: des Koordinationsspiels.",
@@ -51,7 +49,6 @@
   "about-page.reading.h2": "Weiterführende Lektüre",
   "about-page.reading.link1-label": "Buttons, Blenders, and Coordination — Good Thoughts",
   "about-page.reading.link2-label": "What a viral question tells us about game theory — The Conversation",
-
   "why-blue-page.h1": "Warum Blau",
   "why-blue-page.subtitle": "Das Argument für Kooperation",
   "why-blue-page.intro": "Blau ist die schwierigere Wahl. Sie erfordert, dass du Milliarden von Fremden vertraust — ohne Garantie, dass sie dir vertrauen. Hier ist, warum sich dieses Risiko lohnen könnte.",
@@ -68,7 +65,6 @@
   "why-blue-page.schelling.body": "Ein Schelling-Punkt ist eine Lösung, auf die sich Menschen ohne Kommunikation einigen.",
   "why-blue-page.nav.about": "← Das Dilemma",
   "why-blue-page.nav.red": "Warum Rot? →",
-
   "why-red-page.h1": "Warum Rot",
   "why-red-page.subtitle": "Das Argument für Selbstschutz",
   "why-red-page.intro": "Rot ist die unangenehme Wahl — sie wirkt egoistisch. Doch die Logik dahinter ist präzise.",
@@ -86,7 +82,6 @@
   "why-red-page.distrust.body": "Reale Beispiele zeigen, dass Kooperation oft scheitert.",
   "why-red-page.nav.blue": "← Warum Blau?",
   "why-red-page.nav.about": "Das Dilemma →",
-
   "privacy-page.h1": "Datenschutzerklärung",
   "privacy-page.subtitle": "Zuletzt aktualisiert: 5. Mai 2026",
   "privacy-page.intro": "Diese Datenschutzerklärung beschreibt, wie redor.blue Informationen verarbeitet.",
@@ -103,7 +98,7 @@
   "privacy-page.cookies.choice-text": "merkt sich deine Auswahl",
   "privacy-page.cookies.outro": "Diese enthalten keine persönlichen Daten.",
   "privacy-page.adsense.h2": "Google AdSense",
-  "privacy-page.adsense.body": "Wir verwenden Google AdSense für Werbung.",
+  "privacy-page.adsense.body": "Wir verwenden Google AdSense für Werbung. Google kann Cookies setzen und Daten erfassen, um personalisierte Anzeigen zu schalten. Dies unterliegt der <googlePrivacy>Datenschutzerklärung von Google</googlePrivacy>. Du kannst personalisierte Werbung über die <adSettings>Google-Anzeigeneinstellungen</adSettings> deaktivieren.",
   "privacy-page.sharing.h2": "Datenweitergabe",
   "privacy-page.sharing.body": "Wir verkaufen oder teilen keine Daten.",
   "privacy-page.retention.h2": "Datenspeicherung",

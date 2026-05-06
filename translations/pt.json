@@ -14,7 +14,6 @@
   "landing-page.error.generic": "Algo correu mal. Tenta novamente.",
   "landing-page.error.network": "Erro de rede. Tenta novamente.",
   "landing-page.live-count": "pessoas já escolheram",
-
   "results-page.loading": "A contar votos…",
   "results-page.error": "Não foi possível carregar os resultados.",
   "results-page.outcome.survived": "SOBREVIVESTE",
@@ -27,7 +26,6 @@
   "results-page.result-bar.votes": "{{count}} votos",
   "results-page.share.text.survived": "Acabei de pressionar um botão e sobrevivi. O que escolherias?\n\n{{url}}",
   "results-page.share.text.died": "Acabei de pressionar um botão e morri. O que escolherias?\n\n{{url}}",
-
   "about-page.h1": "O dilema",
   "about-page.subtitle": "Porque é que esta questão é mais difícil do que parece",
   "about-page.intro": "Isto não é uma sondagem. É uma experiência mental com consequências reais — uma versão em direto de um dos problemas mais estudados na teoria dos jogos: o jogo de coordenação.",
@@ -51,7 +49,6 @@
   "about-page.reading.h2": "Leitura adicional",
   "about-page.reading.link1-label": "Buttons, Blenders, and Coordination — Good Thoughts",
   "about-page.reading.link2-label": "What a viral question tells us about game theory — The Conversation",
-
   "why-blue-page.h1": "Porquê azul",
   "why-blue-page.subtitle": "O argumento a favor da cooperação",
   "why-blue-page.intro": "O azul é a escolha mais difícil. Exige confiar em milhares de milhões de desconhecidos.",
@@ -68,7 +65,6 @@
   "why-blue-page.schelling.body": "Uma solução para a qual as pessoas convergem sem comunicação.",
   "why-blue-page.nav.about": "← O dilema",
   "why-blue-page.nav.red": "Porquê vermelho? →",
-
   "why-red-page.h1": "Porquê vermelho",
   "why-red-page.subtitle": "O argumento da autopreservação",
   "why-red-page.intro": "O vermelho pode parecer egoísta, mas a sua lógica é clara.",
@@ -86,7 +82,6 @@
   "why-red-page.distrust.body": "A cooperação falha frequentemente no mundo real.",
   "why-red-page.nav.blue": "← Porquê azul?",
   "why-red-page.nav.about": "O dilema →",
-
   "privacy-page.h1": "Política de privacidade",
   "privacy-page.subtitle": "Última actualização: 5 de maio de 2026",
   "privacy-page.intro": "Esta política descreve como tratamos a informação.",
@@ -103,7 +98,7 @@
   "privacy-page.cookies.choice-text": "guarda a tua escolha",
   "privacy-page.cookies.outro": "Não contêm dados pessoais.",
   "privacy-page.adsense.h2": "Google AdSense",
-  "privacy-page.adsense.body": "Utilizamos o Google AdSense para mostrar anúncios.",
+  "privacy-page.adsense.body": "Utilizamos o Google AdSense para mostrar anúncios. O Google pode usar cookies e recolher dados para mostrar anúncios personalizados. Isto é regido pela <googlePrivacy>Política de privacidade da Google</googlePrivacy>. Podes desativar a publicidade personalizada nas <adSettings>Definições de anúncios da Google</adSettings>.",
   "privacy-page.sharing.h2": "Partilha de dados",
   "privacy-page.sharing.body": "Não vendemos nem partilhamos dados.",
   "privacy-page.retention.h2": "Retenção de dados",

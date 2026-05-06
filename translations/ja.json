@@ -1,6 +1,6 @@
 {
   "landing-page.header": "地球規模のジレンマ",
-  "landing-page.headline": "地球上のすべての人が ボタンを持っている。",
+  "landing-page.headline": "地球上のすべての人がボタンを持っている。",
   "landing-page.rules.red.label": "赤",
   "landing-page.rules.red.text": "半数以上が赤を押した場合, 赤を押した人だけが生き残る。",
   "landing-page.rules.blue.label": "青",
@@ -14,7 +14,6 @@
   "landing-page.error.generic": "問題が発生しました。もう一度お試しください。",
   "landing-page.error.network": "ネットワークエラー。もう一度お試しください。",
   "landing-page.live-count": "人がすでに選択しました",
-
   "results-page.loading": "票を数えています…",
   "results-page.error": "結果を読み込めませんでした。",
   "results-page.outcome.survived": "あなたは生き残った",
@@ -27,7 +26,6 @@
   "results-page.result-bar.votes": "{{count}}票",
   "results-page.share.text.survived": "ボタンを押して生き残りました。あなたならどちらを押しますか？\n\n{{url}}",
   "results-page.share.text.died": "ボタンを押して死にました。あなたならどちらを押しますか？\n\n{{url}}",
-
   "about-page.h1": "このジレンマについて",
   "about-page.subtitle": "なぜこの問いは見た目以上に難しいのか",
   "about-page.intro": "これは単なるアンケートではありません。現実的な意味を持つ思考実験です。ゲーム理論で最もよく研究されている問題の一つ、「協調ゲーム」のライブ版です。",
@@ -51,7 +49,6 @@
   "about-page.reading.h2": "参考資料",
   "about-page.reading.link1-label": "Buttons, Blenders, and Coordination — Good Thoughts",
   "about-page.reading.link2-label": "What a viral question tells us about game theory — The Conversation",
-
   "why-blue-page.h1": "なぜ青か",
   "why-blue-page.subtitle": "協力を選ぶ理由",
   "why-blue-page.intro": "青は難しい選択です。見知らぬ何十億もの人々を信じる必要があります。",
@@ -68,7 +65,6 @@
   "why-blue-page.schelling.body": "コミュニケーションなしで人々が集まる自然な解です。",
   "why-blue-page.nav.about": "← ジレンマ",
   "why-blue-page.nav.red": "なぜ赤？ →",
-
   "why-red-page.h1": "なぜ赤か",
   "why-red-page.subtitle": "自己防衛の選択",
   "why-red-page.intro": "赤は利己的に見えますが、そのロジックは明確です。",
@@ -86,7 +82,6 @@
   "why-red-page.distrust.body": "現実では協力は必ずしも成立しません。",
   "why-red-page.nav.blue": "← なぜ青？",
   "why-red-page.nav.about": "ジレンマ →",
-
   "privacy-page.h1": "プライバシーポリシー",
   "privacy-page.subtitle": "最終更新日：2026年5月5日",
   "privacy-page.intro": "本ポリシーでは、当サイトの情報の扱いについて説明します。",
@@ -103,7 +98,7 @@
   "privacy-page.cookies.choice-text": "選択を記憶",
   "privacy-page.cookies.outro": "個人情報は含まれません。",
   "privacy-page.adsense.h2": "Google AdSense",
-  "privacy-page.adsense.body": "広告表示のために使用します。",
+  "privacy-page.adsense.body": "当サイトではGoogle AdSenseを使用して広告を表示しています。Googleはクッキーを使用し、パーソナライズ広告のためにデータを収集する場合があります。詳細は<googlePrivacy>Googleのプライバシーポリシー</googlePrivacy>をご覧ください。パーソナライズ広告の停止は<adSettings>Google広告設定</adSettings>から行えます。",
   "privacy-page.sharing.h2": "データ共有",
   "privacy-page.sharing.body": "データの販売・共有は行いません。",
   "privacy-page.retention.h2": "データ保持",

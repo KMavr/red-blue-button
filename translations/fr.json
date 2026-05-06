@@ -14,7 +14,6 @@
   "landing-page.error.generic": "Une erreur est survenue. Réessayez.",
   "landing-page.error.network": "Erreur réseau. Réessayez.",
   "landing-page.live-count": "personnes ont déjà choisi",
-
   "results-page.loading": "Comptage des votes…",
   "results-page.error": "Impossible de charger les résultats.",
   "results-page.outcome.survived": "VOUS AVEZ SURVÉCU",
@@ -27,7 +26,6 @@
   "results-page.result-bar.votes": "{{count}} votes",
   "results-page.share.text.survived": "Je viens d'appuyer sur un bouton et j'ai survécu. Lequel choisiriez-vous ?\n\n{{url}}",
   "results-page.share.text.died": "Je viens d'appuyer sur un bouton et je suis mort. Lequel choisiriez-vous ?\n\n{{url}}",
-
   "about-page.h1": "Le dilemme",
   "about-page.subtitle": "Pourquoi cette question est plus difficile qu’elle n’en a l’air",
   "about-page.intro": "Ce n’est pas un simple sondage. C’est une expérience de pensée aux conséquences réelles — une version en direct de l’un des problèmes les plus étudiés en théorie des jeux : le jeu de coordination.",
@@ -51,7 +49,6 @@
   "about-page.reading.h2": "Lectures complémentaires",
   "about-page.reading.link1-label": "Buttons, Blenders, and Coordination — Good Thoughts",
   "about-page.reading.link2-label": "What a viral question tells us about game theory — The Conversation",
-
   "why-blue-page.h1": "Pourquoi bleu",
   "why-blue-page.subtitle": "L’argument en faveur de la coopération",
   "why-blue-page.intro": "Le bleu est le choix le plus difficile. Il exige de faire confiance à des milliards d’inconnus, sans garantie.",
@@ -68,7 +65,6 @@
   "why-blue-page.schelling.body": "Un point de Schelling est une solution vers laquelle les gens convergent sans communication.",
   "why-blue-page.nav.about": "← Le dilemme",
   "why-blue-page.nav.red": "Pourquoi rouge ? →",
-
   "why-red-page.h1": "Pourquoi rouge",
   "why-red-page.subtitle": "L’argument en faveur de l’auto-préservation",
   "why-red-page.intro": "Le rouge peut sembler égoïste, mais sa logique est rigoureuse.",
@@ -86,7 +82,6 @@
   "why-red-page.distrust.body": "Les exemples réels montrent que la coopération échoue souvent.",
   "why-red-page.nav.blue": "← Pourquoi bleu ?",
   "why-red-page.nav.about": "Le dilemme →",
-
   "privacy-page.h1": "Politique de confidentialité",
   "privacy-page.subtitle": "Dernière mise à jour : 5 mai 2026",
   "privacy-page.intro": "Cette politique décrit comment nous traitons les informations.",
@@ -103,7 +98,7 @@
   "privacy-page.cookies.choice-text": "mémorise votre choix",
   "privacy-page.cookies.outro": "Ils ne contiennent aucune donnée personnelle.",
   "privacy-page.adsense.h2": "Google AdSense",
-  "privacy-page.adsense.body": "Nous utilisons Google AdSense pour afficher des publicités.",
+  "privacy-page.adsense.body": "Nous utilisons Google AdSense pour afficher des publicités. Google peut utiliser des cookies et collecter des données pour diffuser des annonces personnalisées. Cela est régi par la <googlePrivacy>Politique de confidentialité de Google</googlePrivacy>. Vous pouvez désactiver les annonces personnalisées via les <adSettings>Paramètres des annonces Google</adSettings>.",
   "privacy-page.sharing.h2": "Partage des données",
   "privacy-page.sharing.body": "Nous ne vendons ni ne partageons vos données.",
   "privacy-page.retention.h2": "Conservation des données",

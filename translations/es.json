@@ -14,7 +14,6 @@
   "landing-page.error.generic": "Algo salió mal. Inténtalo de nuevo.",
   "landing-page.error.network": "Error de red. Inténtalo de nuevo.",
   "landing-page.live-count": "personas ya han elegido",
-
   "results-page.loading": "Contando votos…",
   "results-page.error": "No se pudieron cargar los resultados.",
   "results-page.outcome.survived": "SOBREVIVISTE",
@@ -27,7 +26,6 @@
   "results-page.result-bar.votes": "{{count}} votos",
   "results-page.share.text.survived": "Acabo de presionar un botón y sobreviví. ¿Cuál elegirías?\n\n{{url}}",
   "results-page.share.text.died": "Acabo de presionar un botón y morí. ¿Cuál elegirías?\n\n{{url}}",
-
   "about-page.h1": "El dilema",
   "about-page.subtitle": "Por qué esta pregunta es más difícil de lo que parece",
   "about-page.intro": "Esto no es una encuesta. Es un experimento mental con consecuencias reales: una versión en vivo de uno de los problemas más estudiados en teoría de juegos: el juego de coordinación.",
@@ -51,7 +49,6 @@
   "about-page.reading.h2": "Lecturas adicionales",
   "about-page.reading.link1-label": "Buttons, Blenders, and Coordination — Good Thoughts",
   "about-page.reading.link2-label": "What a viral question tells us about game theory — The Conversation",
-
   "why-blue-page.h1": "Por qué azul",
   "why-blue-page.subtitle": "El argumento a favor de la cooperación",
   "why-blue-page.intro": "El azul es la opción más difícil. Requiere confiar en miles de millones de desconocidos sin garantía.",
@@ -68,7 +65,6 @@
   "why-blue-page.schelling.body": "Un punto de Schelling es una solución a la que las personas llegan sin comunicarse.",
   "why-blue-page.nav.about": "← El dilema",
   "why-blue-page.nav.red": "¿Por qué rojo? →",
-
   "why-red-page.h1": "Por qué rojo",
   "why-red-page.subtitle": "El argumento a favor de la autopreservación",
   "why-red-page.intro": "El rojo parece egoísta, pero su lógica es precisa.",
@@ -86,7 +82,6 @@
   "why-red-page.distrust.body": "Los ejemplos reales muestran que la cooperación falla a menudo.",
   "why-red-page.nav.blue": "← ¿Por qué azul?",
   "why-red-page.nav.about": "El dilema →",
-
   "privacy-page.h1": "Política de privacidad",
   "privacy-page.subtitle": "Última actualización: 5 de mayo de 2026",
   "privacy-page.intro": "Esta política describe cómo manejamos la información.",
@@ -103,7 +98,7 @@
   "privacy-page.cookies.choice-text": "recuerda tu elección",
   "privacy-page.cookies.outro": "No contienen datos personales.",
   "privacy-page.adsense.h2": "Google AdSense",
-  "privacy-page.adsense.body": "Usamos Google AdSense para mostrar anuncios.",
+  "privacy-page.adsense.body": "Usamos Google AdSense para mostrar anuncios. Google puede usar cookies y recopilar datos para mostrar anuncios personalizados. Esto se rige por la <googlePrivacy>Política de privacidad de Google</googlePrivacy>. Puedes desactivar la publicidad personalizada en la <adSettings>Configuración de anuncios de Google</adSettings>.",
   "privacy-page.sharing.h2": "Compartición de datos",
   "privacy-page.sharing.body": "No vendemos ni compartimos datos.",
   "privacy-page.retention.h2": "Retención de datos",
