@@ -37,12 +37,14 @@ function LandingPage() {
 
         <div className={styles.rules}>
           <p className={styles.rule}>
-            <span className={styles.redLabel}>{t("landing-page.rules.red.label")}</span>
-            {" "}{t("landing-page.rules.red.text")}
+            <span className={styles.redLabel}>
+              {t("landing-page.rules.red.text")}
+            </span>
           </p>
           <p className={styles.rule}>
-            <span className={styles.blueLabel}>{t("landing-page.rules.blue.label")}</span>
-            {" "}{t("landing-page.rules.blue.text")}
+            <span className={styles.blueLabel}>
+              {t("landing-page.rules.blue.text")}
+            </span>
           </p>
         </div>
 
@@ -69,7 +71,7 @@ function LandingPage() {
 
 const styles = {
   wrapper: cn("min-h-screen flex items-center justify-center px-5 pb-20 pt-6"),
-  inner: cn("max-w-160 w-full text-center"),
+  inner: cn(" w-full text-center"),
   header: cn(
     "text-[0.7rem] tracking-[0.25em] text-secondary uppercase mb-5",
     "rtl:tracking-normal rtl:normal-case rtl:text-[0.9rem]",
@@ -78,11 +80,13 @@ const styles = {
     "text-[clamp(2rem,5vw,3.25rem)] font-bold leading-[1.15] tracking-[-0.02em] mb-7",
   ),
   rules: cn("flex flex-col gap-2 mb-6 text-left rtl:text-right"),
-  rule: cn("text-[0.9rem] leading-normal text-secondary"),
+  rule: cn("text-[0.9rem] leading-normal text-center text-secondary"),
   redLabel: cn("font-semibold text-red"),
   blueLabel: cn("font-semibold text-blue"),
   cta: cn("text-[1.1rem] font-semibold tracking-[0.02em] mb-8"),
-  liveCount: cn("flex items-center justify-center gap-2 text-[0.85rem] text-secondary mt-6"),
+  liveCount: cn(
+    "flex items-center justify-center gap-2 text-[0.85rem] text-secondary mt-6",
+  ),
   error: cn("text-red text-[0.875rem] mb-4"),
   buttons: cn("flex gap-5 justify-center flex-wrap"),
 };
