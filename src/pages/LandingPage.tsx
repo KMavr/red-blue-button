@@ -58,14 +58,6 @@ function LandingPage() {
           </div>
         </div>
 
-        <p className={styles.tension}>
-          {t("landing-page.tension.line-1")}
-          <br />
-          {t("landing-page.tension.line-2")}
-          <br />
-          {t("landing-page.tension.line-3")}
-        </p>
-
         <p className={styles.cta}>{t("landing-page.cta")}</p>
 
         {total !== null && (
@@ -88,16 +80,16 @@ function LandingPage() {
 }
 
 const styles = {
-  wrapper: cn("min-h-screen flex items-center justify-center px-5 pb-16 pt-8"),
+  wrapper: cn("min-h-screen flex items-center justify-center px-5 pb-20 pt-6"),
   inner: cn("max-w-160 w-full text-center"),
   header: cn(
-    "text-[0.7rem] tracking-[0.25em] text-secondary uppercase mb-8",
+    "text-[0.7rem] tracking-[0.25em] text-secondary uppercase mb-5",
     "rtl:tracking-normal rtl:normal-case rtl:text-[0.9rem]",
   ),
   headline: cn(
-    "text-[clamp(2rem,5vw,3.25rem)] font-bold leading-[1.15] tracking-[-0.02em] mb-10",
+    "text-[clamp(2rem,5vw,3.25rem)] font-bold leading-[1.15] tracking-[-0.02em] mb-7",
   ),
-  rules: cn("flex flex-col gap-3 mb-8 text-left rtl:text-right"),
+  rules: cn("flex flex-col gap-3 mb-6 text-left rtl:text-right"),
   redRule: cn(
     "flex gap-4 items-start bg-surface border border-line rounded-[10px] px-5 py-4",
     "[border-left:3px_solid_var(--color-red)]",
@@ -119,9 +111,8 @@ const styles = {
     "bg-[rgba(59,130,246,0.12)] text-blue shrink-0 mt-0.5",
     "rtl:tracking-normal rtl:text-[0.85rem]",
   ),
-  tension: cn("text-[0.95rem] leading-[1.8] text-secondary mb-6"),
-  cta: cn("text-[1.1rem] font-semibold tracking-[0.02em] mb-10"),
-  liveCount: cn("flex items-center justify-center gap-2 text-[0.85rem] text-secondary mb-6"),
+  cta: cn("text-[1.1rem] font-semibold tracking-[0.02em] mb-5"),
+  liveCount: cn("flex items-center justify-center gap-2 text-[0.85rem] text-secondary mb-5"),
   error: cn("text-red text-[0.875rem] mb-4"),
   buttons: cn("flex gap-5 justify-center flex-wrap"),
 };
