@@ -14,9 +14,9 @@ export default function App() {
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-      <footer className="site-footer">
-        <span className="site-footer__copy">© 2026 redor.blue</span>
-        <Link to="/privacy">Privacy Policy</Link>
+      <footer className="flex justify-center gap-6 border-t border-line px-6 py-[1.5rem]">
+        <span className="text-secondary text-xs tracking-[0.05em]">© 2026 redor.blue</span>
+        <Link to="/privacy" className="text-secondary text-xs no-underline tracking-[0.05em] hover:text-primary">Privacy Policy</Link>
       </footer>
     </BrowserRouter>
   );
