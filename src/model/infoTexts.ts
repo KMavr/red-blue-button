@@ -8,7 +8,8 @@ import PlainList from '../components/PlainList/PlainList';
 import LabeledList from '../components/LabeledList/LabeledList';
 import TransParagraph from '../components/TransParagraph/TransParagraph';
 
-type BlockOf<T extends React.ComponentType<object>> = {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type BlockOf<T extends React.ComponentType<any>> = {
   component: T;
   props: React.ComponentProps<T>;
 };
