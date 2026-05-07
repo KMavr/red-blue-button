@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import BackLink from '../components/BackLink/BackLink';
-import { WHY_RED_BLOCKS } from '../model/infoTexts';
+import { WHY_RED_BLOCKS } from '../config/infoTexts';
 import { cn } from '../utils/cn';
 
 function WhyRedPage() {

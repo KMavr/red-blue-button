@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import BackLink from '../components/BackLink/BackLink';
-import { PRIVACY_BLOCKS } from '../model/infoTexts';
+import { PRIVACY_BLOCKS } from '../config/infoTexts';
 import { cn } from '../utils/cn';
 
 function PrivacyPage() {
