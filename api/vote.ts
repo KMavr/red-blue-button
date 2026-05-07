@@ -4,11 +4,13 @@ import { createHash } from 'crypto';
 
 const supabase = createClient(
   process.env.SUPABASE_URL!.replace(/\/$/, ''),
-  process.env.SUPABASE_SERVICE_KEY!
+  process.env.SUPABASE_SERVICE_KEY!,
 );
 
 function hashIp(ip: string): string {
-  return createHash('sha256').update(ip + 'salt-rbb').digest('hex');
+  return createHash('sha256')
+    .update(ip + 'salt-rbb')
+    .digest('hex');
 }
 
 function getIp(req: VercelRequest): string {
@@ -26,7 +28,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (choice !== 'red' && choice !== 'blue') {
     return res.status(400).json({ error: 'Invalid choice' });
   }
-
 
   const ip = getIp(req);
   const ipHash = hashIp(ip);
@@ -55,14 +56,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   // Upsert ip_log
-  await supabase
-    .from('ip_log')
-    .upsert({ ip_hash: ipHash, last_vote: new Date().toISOString() });
+  await supabase.from('ip_log').upsert({ ip_hash: ipHash, last_vote: new Date().toISOString() });
 
   // Fetch current totals
-  const { data: totals } = await supabase
-    .from('votes')
-    .select('choice');
+  const { data: totals } = await supabase.from('votes').select('choice');
 
   const red = totals?.filter((v) => v.choice === 'red').length ?? 0;
   const blue = totals?.filter((v) => v.choice === 'blue').length ?? 0;

@@ -13,16 +13,16 @@ Live at **redor.blue**.
 
 ## Stack
 
-| Layer | Technology |
-|---|---|
-| Frontend | React 19 + TypeScript + Vite |
-| Styling | Tailwind CSS v4 |
-| Animations | Framer Motion |
-| Routing | React Router v7 |
-| i18n | i18next (12 languages) |
-| Backend | Vercel Serverless Functions (`/api`) |
-| Database | Supabase (PostgreSQL) |
-| Deployment | Vercel |
+| Layer      | Technology                           |
+| ---------- | ------------------------------------ |
+| Frontend   | React 19 + TypeScript + Vite         |
+| Styling    | Tailwind CSS v4                      |
+| Animations | Framer Motion                        |
+| Routing    | React Router v7                      |
+| i18n       | i18next (12 languages)               |
+| Backend    | Vercel Serverless Functions (`/api`) |
+| Database   | Supabase (PostgreSQL)                |
+| Deployment | Vercel                               |
 
 ## Project Structure
 

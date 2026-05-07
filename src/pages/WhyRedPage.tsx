@@ -23,7 +23,7 @@ function WhyRedPage() {
 const styles = {
   wrapper: cn('flex min-h-screen justify-center px-5 py-16'),
   inner: cn('w-full max-w-160'),
-  h1: cn('mb-1 text-[2rem] font-bold text-red'),
+  h1: cn('text-red mb-1 text-[2rem] font-bold'),
   subtitle: cn('text-secondary mb-8 text-[0.8rem]'),
 };
 

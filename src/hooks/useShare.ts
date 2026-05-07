@@ -8,9 +8,7 @@ export function useShare(survived: boolean | null) {
   const [copied, setCopied] = useState(false);
 
   function share() {
-    const key = survived
-      ? 'results-page.share.text.survived'
-      : 'results-page.share.text.died';
+    const key = survived ? 'results-page.share.text.survived' : 'results-page.share.text.died';
     const text = t(key, { url: SITE_URL });
 
     if (navigator.share) {

@@ -16,16 +16,16 @@ A global social dilemma web app. Users choose Red or Blue: red majority kills ev
 
 ## Key Files
 
-| File | Purpose |
-|---|---|
-| `api/vote.ts` | POST handler — IP dedup, vote insert, returns `{ survived, results }` |
-| `api/results.ts` | GET handler — aggregates totals + per-country breakdown |
-| `src/hooks/useVote.ts` | Vote submission, cookie management, navigation |
-| `src/hooks/useResults.ts` | Polls `/api/results` every 5s; derives survival outcome |
-| `src/hooks/useLandingStats.ts` | Polls total count for landing page live ticker |
-| `src/i18n/index.ts` | i18next init with all 12 translation files |
-| `src/types/index.ts` | `Choice`, `Results`, `VoteResponse`, `CountryResult` types |
-| `translations/en.json` | Source of truth for all translation keys |
+| File                           | Purpose                                                               |
+| ------------------------------ | --------------------------------------------------------------------- |
+| `api/vote.ts`                  | POST handler — IP dedup, vote insert, returns `{ survived, results }` |
+| `api/results.ts`               | GET handler — aggregates totals + per-country breakdown               |
+| `src/hooks/useVote.ts`         | Vote submission, cookie management, navigation                        |
+| `src/hooks/useResults.ts`      | Polls `/api/results` every 5s; derives survival outcome               |
+| `src/hooks/useLandingStats.ts` | Polls total count for landing page live ticker                        |
+| `src/i18n/index.ts`            | i18next init with all 12 translation files                            |
+| `src/types/index.ts`           | `Choice`, `Results`, `VoteResponse`, `CountryResult` types            |
+| `translations/en.json`         | Source of truth for all translation keys                              |
 
 ## Supabase Tables
 

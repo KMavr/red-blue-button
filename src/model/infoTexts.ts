@@ -8,6 +8,7 @@ import PlainList from '../components/PlainList/PlainList';
 import LabeledList from '../components/LabeledList/LabeledList';
 import TransParagraph from '../components/TransParagraph/TransParagraph';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type BlockOf<T extends React.ComponentType<any>> = {
   component: T;
   props: React.ComponentProps<T>;
@@ -153,7 +154,11 @@ export const PRIVACY_BLOCKS: Block[] = [
   {
     component: PlainList,
     props: {
-      items: ['privacy-page.collect.item1', 'privacy-page.collect.item2', 'privacy-page.collect.item3'],
+      items: [
+        'privacy-page.collect.item1',
+        'privacy-page.collect.item2',
+        'privacy-page.collect.item3',
+      ],
     },
   },
 
@@ -163,8 +168,14 @@ export const PRIVACY_BLOCKS: Block[] = [
     component: LabeledList,
     props: {
       items: [
-        { labelKey: 'privacy-page.cookies.voted-label', textKey: 'privacy-page.cookies.voted-text' },
-        { labelKey: 'privacy-page.cookies.choice-label', textKey: 'privacy-page.cookies.choice-text' },
+        {
+          labelKey: 'privacy-page.cookies.voted-label',
+          textKey: 'privacy-page.cookies.voted-text',
+        },
+        {
+          labelKey: 'privacy-page.cookies.choice-label',
+          textKey: 'privacy-page.cookies.choice-text',
+        },
       ],
     },
   },

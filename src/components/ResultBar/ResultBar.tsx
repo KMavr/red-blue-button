@@ -1,5 +1,5 @@
-import { useTranslation } from "react-i18next";
-import { cn } from "../../utils/cn";
+import { useTranslation } from 'react-i18next';
+import { cn } from '../../utils/cn';
 
 interface ResultBarProps {
   redPct: number;
@@ -19,16 +19,16 @@ function ResultBar({ redPct, bluePct, total, live }: ResultBarProps) {
       </div>
       <div className={styles.labels}>
         <span className={styles.redLabel}>
-          {redPct}% {t("landing-page.rules.red.label")}
+          {redPct}% {t('landing-page.rules.red.label')}
         </span>
         <span className={styles.totalLabel}>
           {live && <span className="live-dot" aria-hidden="true" />}
-          {t("results-page.result-bar.votes", {
+          {t('results-page.result-bar.votes', {
             count: total.toLocaleString(),
           })}
         </span>
         <span className={styles.blueLabel}>
-          {bluePct}% {t("landing-page.rules.blue.label")}
+          {bluePct}% {t('landing-page.rules.blue.label')}
         </span>
       </div>
     </div>
@@ -36,24 +36,24 @@ function ResultBar({ redPct, bluePct, total, live }: ResultBarProps) {
 }
 
 const styles = {
-  wrapper: cn("mb-8"),
+  wrapper: cn('mb-8'),
   barContainer: cn(
-    "h-4.5 rounded-[9px] overflow-hidden flex bg-surface border border-line mb-[0.6rem]",
+    'bg-surface border-line mb-[0.6rem] flex h-4.5 overflow-hidden rounded-[9px] border',
   ),
   redFill: cn(
-    "h-full transition-[width] duration-[0.8s] ease-in-out",
-    "bg-[linear-gradient(90deg,#7f0000,#dc2626)] shadow-[2px_0_12px_rgba(220,38,38,0.45)]",
+    'h-full transition-[width] duration-[0.8s] ease-in-out',
+    'bg-[linear-gradient(90deg,#7f0000,#dc2626)] shadow-[2px_0_12px_rgba(220,38,38,0.45)]',
   ),
   blueFill: cn(
-    "h-full transition-[width] duration-[0.8s] ease-in-out",
-    "bg-[linear-gradient(90deg,#3b82f6,#1d3470)]",
+    'h-full transition-[width] duration-[0.8s] ease-in-out',
+    'bg-[linear-gradient(90deg,#3b82f6,#1d3470)]',
   ),
   labels: cn(
-    "flex justify-between items-center text-[0.8rem] font-bold tracking-[0.06em] rtl:flex-row-reverse",
+    'flex items-center justify-between text-[0.8rem] font-bold tracking-[0.06em] rtl:flex-row-reverse',
   ),
-  redLabel: cn("text-red"),
-  totalLabel: cn("text-secondary font-normal text-[0.75rem] flex items-center gap-[0.4rem]"),
-  blueLabel: cn("text-blue"),
+  redLabel: cn('text-red'),
+  totalLabel: cn('text-secondary flex items-center gap-[0.4rem] text-[0.75rem] font-normal'),
+  blueLabel: cn('text-blue'),
 };
 
 export default ResultBar;

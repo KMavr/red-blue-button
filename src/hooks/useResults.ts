@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import Cookies from "js-cookie";
-import type { Choice, Results } from "../types";
-import { deriveSurvived } from "../utils/resultsUtils";
+import { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import Cookies from 'js-cookie';
+import type { Choice, Results } from '../types';
+import { deriveSurvived } from '../utils/resultsUtils';
 
 interface LocationState {
   choice?: Choice;
@@ -15,23 +15,21 @@ const POLL_INTERVAL = 5000;
 export function useResults() {
   const navigate = useNavigate();
   const { state } = useLocation() as { state: LocationState | null };
-  const [results, setResults] = useState<Results | null>(
-    state?.results ?? null,
-  );
+  const [results, setResults] = useState<Results | null>(state?.results ?? null);
   const [loading, setLoading] = useState(!state?.results);
   const [live, setLive] = useState(false);
 
   const choice: Choice | undefined =
-    state?.choice ?? (Cookies.get("last_choice") as Choice | undefined);
+    state?.choice ?? (Cookies.get('last_choice') as Choice | undefined);
 
   useEffect(() => {
-    if (!Cookies.get("voted")) {
-      navigate("/", { replace: true });
+    if (!Cookies.get('voted')) {
+      navigate('/', { replace: true });
       return;
     }
 
     async function fetchResults() {
-      const data = await fetch("/api/results").then((r) => r.json());
+      const data = await fetch('/api/results').then((r) => r.json());
       setResults(data);
       setLoading(false);
       setLive(true);
@@ -43,8 +41,8 @@ export function useResults() {
     return () => clearInterval(id);
   }, [navigate, state]);
 
-  let majority: "blue" | "red" | null = null;
-  if (results) majority = results.blue >= results.red ? "blue" : "red";
+  let majority: 'blue' | 'red' | null = null;
+  if (results) majority = results.blue >= results.red ? 'blue' : 'red';
 
   const survived = deriveSurvived(state?.survived, majority, choice);
 

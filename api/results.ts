@@ -3,13 +3,11 @@ import { createClient } from '@supabase/supabase-js';
 
 const supabase = createClient(
   process.env.SUPABASE_URL!.replace(/\/$/, ''),
-  process.env.SUPABASE_SERVICE_KEY!
+  process.env.SUPABASE_SERVICE_KEY!,
 );
 
 export default async function handler(_req: VercelRequest, res: VercelResponse) {
-  const { data, error } = await supabase
-    .from('votes')
-    .select('choice, country');
+  const { data, error } = await supabase.from('votes').select('choice, country');
 
   if (error) {
     return res.status(500).json({ error: 'Failed to fetch results' });
