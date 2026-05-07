@@ -4,13 +4,14 @@ import { cn } from '../../utils/cn';
 
 interface NavLinksProps {
   links: { to: string; labelKey: string; color: 'red' | 'blue' | 'muted'; suffix?: string }[];
+  className?: string;
 }
 
-function NavLinks({ links }: NavLinksProps) {
+function NavLinks({ links, className }: NavLinksProps) {
   const { t } = useTranslation();
 
   return (
-    <div className={styles.navLinks}>
+    <div className={cn(styles.navLinks, className)}>
       {links.map((link) => (
         <Link key={link.to} to={link.to} className={styles.navLink[link.color]}>
           {t(link.labelKey)}

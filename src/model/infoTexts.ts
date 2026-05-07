@@ -73,3 +73,68 @@ export const ABOUT_BLOCKS: Block[] = [
     },
   },
 ];
+
+const spreadNav = 'mt-10 justify-between';
+
+export const WHY_RED_BLOCKS: Block[] = [
+  { component: Paragraph, props: { text: 'why-red-page.intro' } },
+
+  { component: Heading, props: { text: 'why-red-page.nash.h2' } },
+  { component: Paragraph, props: { text: 'why-red-page.nash.body' } },
+
+  { component: Heading, props: { text: 'why-red-page.uncertainty.h2' } },
+  { component: Paragraph, props: { text: 'why-red-page.uncertainty.body1' } },
+  { component: Paragraph, props: { text: 'why-red-page.uncertainty.body2' } },
+
+  { component: Heading, props: { text: 'why-red-page.framing.h2' } },
+  { component: Paragraph, props: { text: 'why-red-page.framing.body' } },
+
+  { component: Heading, props: { text: 'why-red-page.villain.h2' } },
+  { component: Paragraph, props: { text: 'why-red-page.villain.body1' } },
+  { component: Paragraph, props: { text: 'why-red-page.villain.body2' } },
+
+  { component: Heading, props: { text: 'why-red-page.distrust.h2' } },
+  { component: Paragraph, props: { text: 'why-red-page.distrust.body' } },
+
+  {
+    component: NavLinks,
+    props: {
+      className: spreadNav,
+      links: [
+        { to: '/why-blue', labelKey: 'why-red-page.nav.blue', color: 'blue' },
+        { to: '/about', labelKey: 'why-red-page.nav.about', color: 'muted' },
+      ],
+    },
+  },
+];
+
+export const WHY_BLUE_BLOCKS: Block[] = [
+  { component: Paragraph, props: { text: 'why-blue-page.intro' } },
+
+  { component: Heading, props: { text: 'why-blue-page.self-fulfilling.h2' } },
+  { component: Paragraph, props: { text: 'why-blue-page.self-fulfilling.body' } },
+
+  { component: Heading, props: { text: 'why-blue-page.collective.h2' } },
+  { component: Paragraph, props: { text: 'why-blue-page.collective.body' } },
+
+  { component: Heading, props: { text: 'why-blue-page.red-unsafe.h2' } },
+  { component: Paragraph, props: { text: 'why-blue-page.red-unsafe.body' } },
+
+  { component: Heading, props: { text: 'why-blue-page.majority.h2' } },
+  { component: Paragraph, props: { text: 'why-blue-page.majority.body1' } },
+  { component: Paragraph, props: { text: 'why-blue-page.majority.body2' } },
+
+  { component: Heading, props: { text: 'why-blue-page.schelling.h2' } },
+  { component: Paragraph, props: { text: 'why-blue-page.schelling.body' } },
+
+  {
+    component: NavLinks,
+    props: {
+      className: spreadNav,
+      links: [
+        { to: '/about', labelKey: 'why-blue-page.nav.about', color: 'muted' },
+        { to: '/why-red', labelKey: 'why-blue-page.nav.red', color: 'red' },
+      ],
+    },
+  },
+];

@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import BackLink from "../components/BackLink/BackLink";
-import { cn } from "../utils/cn";
+import { useTranslation } from 'react-i18next';
+import BackLink from '../components/BackLink/BackLink';
+import { WHY_RED_BLOCKS } from '../model/infoTexts';
+import { cn } from '../utils/cn';
 
 function WhyRedPage() {
   const { t } = useTranslation();
@@ -9,48 +9,22 @@ function WhyRedPage() {
     <div className={styles.wrapper}>
       <div className={styles.inner}>
         <BackLink />
-        <h1 className={styles.h1}>{t("why-red-page.h1")}</h1>
-        <p className={styles.subtitle}>{t("why-red-page.subtitle")}</p>
-
-        <p className={styles.body}>{t("why-red-page.intro")}</p>
-
-        <h2 className={styles.h2}>{t("why-red-page.nash.h2")}</h2>
-        <p className={styles.body}>{t("why-red-page.nash.body")}</p>
-
-        <h2 className={styles.h2}>{t("why-red-page.uncertainty.h2")}</h2>
-        <p className={styles.body}>{t("why-red-page.uncertainty.body1")}</p>
-        <p className={styles.body}>{t("why-red-page.uncertainty.body2")}</p>
-
-        <h2 className={styles.h2}>{t("why-red-page.framing.h2")}</h2>
-        <p className={styles.body}>{t("why-red-page.framing.body")}</p>
-
-        <h2 className={styles.h2}>{t("why-red-page.villain.h2")}</h2>
-        <p className={styles.body}>{t("why-red-page.villain.body1")}</p>
-        <p className={styles.body}>{t("why-red-page.villain.body2")}</p>
-
-        <h2 className={styles.h2}>{t("why-red-page.distrust.h2")}</h2>
-        <p className={styles.body}>{t("why-red-page.distrust.body")}</p>
-
-        <div className={styles.nav}>
-          <Link to="/why-blue" className={styles.blueLink}>{t("why-red-page.nav.blue")}</Link>
-          <Link to="/about" className={styles.mutedLink}>{t("why-red-page.nav.about")}</Link>
-        </div>
+        <h1 className={styles.h1}>{t('why-red-page.h1')}</h1>
+        <p className={styles.subtitle}>{t('why-red-page.subtitle')}</p>
+        {WHY_RED_BLOCKS.map(({ component: Component, props }, i) => (
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          <Component key={i} {...(props as any)} />
+        ))}
       </div>
     </div>
   );
 }
 
 const styles = {
-  wrapper: cn("min-h-screen flex justify-center px-5 py-16"),
-  inner: cn("max-w-160 w-full"),
-  h1: cn("text-[2rem] font-bold mb-1 text-red"),
-  subtitle: cn("text-secondary text-[0.8rem] mb-8"),
-  h2: cn("text-base font-bold mt-8 mb-2 tracking-[0.02em]"),
-  body: cn("text-[0.9rem] leading-[1.7] text-secondary mb-2"),
-
-  nav: cn("flex justify-between mt-10"),
-  blueLink: cn("text-blue font-semibold text-[0.85rem] no-underline hover:underline"),
-  mutedLink: cn("text-secondary text-[0.85rem] no-underline hover:text-primary"),
+  wrapper: cn('flex min-h-screen justify-center px-5 py-16'),
+  inner: cn('w-full max-w-160'),
+  h1: cn('mb-1 text-[2rem] font-bold text-red'),
+  subtitle: cn('text-secondary mb-8 text-[0.8rem]'),
 };
 
 export default WhyRedPage;
