@@ -1,5 +1,5 @@
 import { useTranslation, Trans } from "react-i18next";
-import { Link } from "react-router-dom";
+import BackLink from "../components/BackLink/BackLink";
 import { cn } from "../utils/cn";
 
 function PrivacyPage() {
@@ -7,7 +7,7 @@ function PrivacyPage() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.inner}>
-        <Link to="/" className={styles.back}>← Back</Link>
+        <BackLink />
         <h1 className={styles.h1}>{t("privacy-page.h1")}</h1>
         <p className={styles.subtitle}>{t("privacy-page.subtitle")}</p>
 
@@ -83,7 +83,7 @@ function PrivacyPage() {
 const styles = {
   wrapper: cn("min-h-screen flex justify-center px-5 py-16"),
   inner: cn("max-w-160 w-full"),
-  back: cn("inline-block text-secondary text-[0.85rem] no-underline hover:text-primary mb-6"),
+
   h1: cn("text-[2rem] font-bold mb-1"),
   subtitle: cn("text-secondary text-[0.8rem] mb-8"),
   h2: cn("text-base font-bold mt-8 mb-2 tracking-[0.02em]"),

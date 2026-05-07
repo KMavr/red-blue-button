@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import ResultBar from "../components/ResultBar";
-import CountryBreakdown from "../components/CountryBreakdown";
+import ResultBar from "../components/ResultBar/ResultBar";
+import CountryBreakdown from "../components/CountryBreakdown/CountryBreakdown";
 import { useResults } from "../hooks/useResults";
 import { useShare } from "../hooks/useShare";
 import { cn } from "../utils/cn";

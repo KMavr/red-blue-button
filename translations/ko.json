@@ -104,5 +104,8 @@
   "privacy-page.retention.h2": "데이터 보관",
   "privacy-page.retention.body": "집계 결과 표시를 위해 보관됩니다.",
   "privacy-page.contact.h2": "문의",
-  "privacy-page.contact.body": "문의: <email>privacy@redor.blue</email>"
+  "privacy-page.contact.body": "문의: <email>privacy@redor.blue</email>",
+  "common.back": "← 뒤로",
+  "footer.dilemma": "딜레마",
+  "footer.privacy": "개인정보 처리방침"
 }

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import type { CountryResult } from "../types";
-import { countryFlag, countryName } from "../utils/countryUtils";
-import { cn } from "../utils/cn";
+import type { CountryResult } from "../../types";
+import { countryFlag, countryName } from "../../utils/countryUtils";
+import { cn } from "../../utils/cn";
 
 interface CountryBreakdownProps {
   countries: CountryResult[];

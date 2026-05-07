@@ -16,7 +16,7 @@
   "landing-page.live-count": "άνθρωποι έχουν ήδη επιλέξει",
   "results-page.loading": "Μέτρηση ψήφων…",
   "results-page.error": "Αποτυχία φόρτωσης αποτελεσμάτων.",
-  "results-page.outcome.survived": "ΕΠΙΒΙΏΣΑΤΕ",
+  "results-page.outcome.survived": "ΕΠΙΒΙΩΣΑΤΕ",
   "results-page.outcome.died": "ΠΕΘΑΝΑΤΕ",
   "results-page.outcome.sub.blue-majority": "Το μπλε έχει την πλειοψηφία — η ανθρωπότητα ζει.",
   "results-page.outcome.sub.red-majority": "Το κόκκινο έχει την πλειοψηφία — επιβιώνουν μόνο οι κόκκινοι.",
@@ -104,5 +104,8 @@
   "privacy-page.retention.h2": "Διατήρηση Δεδομένων",
   "privacy-page.retention.body": "Τα δεδομένα ψηφοφορίας διατηρούνται για εμφάνιση συγκεντρωτικών αποτελεσμάτων.",
   "privacy-page.contact.h2": "Επικοινωνία",
-  "privacy-page.contact.body": "Για ερωτήσεις επικοινωνήστε στο <email>privacy@redor.blue</email>."
+  "privacy-page.contact.body": "Για ερωτήσεις επικοινωνήστε στο <email>privacy@redor.blue</email>.",
+  "common.back": "← Πίσω",
+  "footer.dilemma": "Το Δίλημμα",
+  "footer.privacy": "Πολιτική Απορρήτου"
 }

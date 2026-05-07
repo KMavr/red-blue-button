@@ -104,5 +104,8 @@
   "privacy-page.retention.h2": "الاحتفاظ بالبيانات",
   "privacy-page.retention.body": "يتم الاحتفاظ بالبيانات لعرض النتائج العامة.",
   "privacy-page.contact.h2": "اتصل بنا",
-  "privacy-page.contact.body": "للاستفسار: <email>privacy@redor.blue</email>"
+  "privacy-page.contact.body": "للاستفسار: <email>privacy@redor.blue</email>",
+  "common.back": "← رجوع",
+  "footer.dilemma": "المعضلة",
+  "footer.privacy": "سياسة الخصوصية"
 }

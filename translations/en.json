@@ -23,7 +23,6 @@
   "results-page.result-bar.votes": "{{count}} votes",
   "results-page.share.text.survived": "I just pressed a button and survived. What would you press?\n\n{{url}}",
   "results-page.share.text.died": "I just pressed a button and died. What would you press?\n\n{{url}}",
-
   "about-page.h1": "The Dilemma",
   "about-page.subtitle": "Why this question is harder than it looks",
   "about-page.intro": "This isn't a poll. It's a thought experiment with real stakes — a live version of one of the most studied problems in game theory: the coordination game.",
@@ -47,7 +46,6 @@
   "about-page.reading.h2": "Further Reading",
   "about-page.reading.link1-label": "Buttons, Blenders, and Coordination — Good Thoughts",
   "about-page.reading.link2-label": "What a viral question tells us about game theory — The Conversation",
-
   "why-blue-page.h1": "Why Blue",
   "why-blue-page.subtitle": "The case for cooperation",
   "why-blue-page.intro": "Blue is the harder choice. It requires trusting strangers — billions of them — without any guarantee they'll trust you back. Here's why that bet might be worth making.",
@@ -64,7 +62,6 @@
   "why-blue-page.schelling.body": "Game theorists call it a Schelling point: a solution people converge on without communication, simply because it's the obvious focal one. \"Cooperate\" is the natural focal point when the cooperative outcome is unambiguously better for everyone. Blue doesn't need a coordinated campaign — it just needs enough people to reason the same way.",
   "why-blue-page.nav.about": "← The Dilemma",
   "why-blue-page.nav.red": "Why red? →",
-
   "why-red-page.h1": "Why Red",
   "why-red-page.subtitle": "The case for self-preservation",
   "why-red-page.intro": "Red is the uncomfortable choice to defend — it sounds selfish. But the logic behind it is precise, and dismissing it as irrational misses the point of the dilemma.",
@@ -82,7 +79,6 @@
   "why-red-page.distrust.body": "The real-world parallels to this dilemma — arms races, climate commitments, collective action problems — have a mixed track record at best. People who've watched cooperative frameworks collapse, been betrayed by institutions, or simply grown up in environments where trust was a liability aren't being irrational when they press red. They're applying a prior built from experience.",
   "why-red-page.nav.blue": "← Why blue?",
   "why-red-page.nav.about": "The Dilemma →",
-
   "privacy-page.h1": "Privacy Policy",
   "privacy-page.subtitle": "Last updated: May 5, 2026",
   "privacy-page.intro": "This privacy policy describes how redor.blue (\"we\", \"us\") handles information when you use our website.",
@@ -105,5 +101,8 @@
   "privacy-page.retention.h2": "Data Retention",
   "privacy-page.retention.body": "Vote data (choice, country, and hashed IP) is retained indefinitely for the purpose of displaying aggregate results. No personally identifiable information is stored.",
   "privacy-page.contact.h2": "Contact",
-  "privacy-page.contact.body": "If you have any questions about this policy, you can reach us at <email>privacy@redor.blue</email>."
+  "privacy-page.contact.body": "If you have any questions about this policy, you can reach us at <email>privacy@redor.blue</email>.",
+  "common.back": "← Back",
+  "footer.dilemma": "The Dilemma",
+  "footer.privacy": "Privacy Policy"
 }

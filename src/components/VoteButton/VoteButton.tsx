@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import type { Choice } from "../types";
-import { cn } from "../utils/cn";
+import type { Choice } from "../../types";
+import { cn } from "../../utils/cn";
 
 interface VoteButtonProps {
   color: Choice;

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { cn } from "../utils/cn";
+import { cn } from "../../utils/cn";
 
 const RTL_LANGUAGES = new Set(["ar"]);
 

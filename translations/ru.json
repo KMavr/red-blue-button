@@ -104,5 +104,8 @@
   "privacy-page.retention.h2": "Хранение данных",
   "privacy-page.retention.body": "Данные хранятся для агрегированной статистики.",
   "privacy-page.contact.h2": "Контакты",
-  "privacy-page.contact.body": "Email: <email>privacy@redor.blue</email>"
+  "privacy-page.contact.body": "Email: <email>privacy@redor.blue</email>",
+  "common.back": "← Назад",
+  "footer.dilemma": "Дилемма",
+  "footer.privacy": "Политика конфиденциальности"
 }

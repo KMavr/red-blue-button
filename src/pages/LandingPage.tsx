@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { animate } from "framer-motion";
-import VoteButton from "../components/VoteButton";
+import VoteButton from "../components/VoteButton/VoteButton";
 import { useVote } from "../hooks/useVote";
 import { useLandingStats } from "../hooks/useLandingStats";
 import { cn } from "../utils/cn";

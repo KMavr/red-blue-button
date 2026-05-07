@@ -104,5 +104,8 @@
   "privacy-page.retention.h2": "データ保持",
   "privacy-page.retention.body": "集計結果表示のため保持します。",
   "privacy-page.contact.h2": "お問い合わせ",
-  "privacy-page.contact.body": "お問い合わせ: <email>privacy@redor.blue</email>"
+  "privacy-page.contact.body": "お問い合わせ: <email>privacy@redor.blue</email>",
+  "common.back": "← 戻る",
+  "footer.dilemma": "ジレンマ",
+  "footer.privacy": "プライバシーポリシー"
 }

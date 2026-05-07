@@ -104,5 +104,8 @@
   "privacy-page.retention.h2": "Datenspeicherung",
   "privacy-page.retention.body": "Abstimmungsdaten werden zur Anzeige aggregierter Ergebnisse gespeichert.",
   "privacy-page.contact.h2": "Kontakt",
-  "privacy-page.contact.body": "Bei Fragen: <email>privacy@redor.blue</email>"
+  "privacy-page.contact.body": "Bei Fragen: <email>privacy@redor.blue</email>",
+  "common.back": "← Zurück",
+  "footer.dilemma": "Das Dilemma",
+  "footer.privacy": "Datenschutzrichtlinie"
 }

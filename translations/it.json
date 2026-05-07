@@ -104,5 +104,8 @@
   "privacy-page.retention.h2": "Conservazione dei dati",
   "privacy-page.retention.body": "I dati sono conservati per mostrare risultati aggregati.",
   "privacy-page.contact.h2": "Contatti",
-  "privacy-page.contact.body": "Per domande: <email>privacy@redor.blue</email>"
+  "privacy-page.contact.body": "Per domande: <email>privacy@redor.blue</email>",
+  "common.back": "← Indietro",
+  "footer.dilemma": "Il Dilemma",
+  "footer.privacy": "Informativa sulla Privacy"
 }
