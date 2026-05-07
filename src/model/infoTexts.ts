@@ -4,6 +4,9 @@ import Heading from '../components/Heading/Heading';
 import ExternalLinks from '../components/ExternalLinks/ExternalLinks';
 import NavLinks from '../components/NavLinks/NavLinks';
 import ColoredList from '../components/ColoredList/ColoredList';
+import PlainList from '../components/PlainList/PlainList';
+import LabeledList from '../components/LabeledList/LabeledList';
+import TransParagraph from '../components/TransParagraph/TransParagraph';
 
 type BlockOf<T extends React.ComponentType<any>> = {
   component: T;
@@ -15,7 +18,10 @@ export type Block =
   | BlockOf<typeof Heading>
   | BlockOf<typeof ColoredList>
   | BlockOf<typeof ExternalLinks>
-  | BlockOf<typeof NavLinks>;
+  | BlockOf<typeof NavLinks>
+  | BlockOf<typeof PlainList>
+  | BlockOf<typeof LabeledList>
+  | BlockOf<typeof TransParagraph>;
 
 export const ABOUT_BLOCKS: Block[] = [
   { component: Paragraph, props: { text: 'about-page.intro' } },
@@ -135,6 +141,59 @@ export const WHY_BLUE_BLOCKS: Block[] = [
         { to: '/about', labelKey: 'why-blue-page.nav.about', color: 'muted' },
         { to: '/why-red', labelKey: 'why-blue-page.nav.red', color: 'red' },
       ],
+    },
+  },
+];
+
+export const PRIVACY_BLOCKS: Block[] = [
+  { component: Paragraph, props: { text: 'privacy-page.intro' } },
+
+  { component: Heading, props: { text: 'privacy-page.collect.h2' } },
+  { component: Paragraph, props: { text: 'privacy-page.collect.intro' } },
+  {
+    component: PlainList,
+    props: {
+      items: ['privacy-page.collect.item1', 'privacy-page.collect.item2', 'privacy-page.collect.item3'],
+    },
+  },
+
+  { component: Heading, props: { text: 'privacy-page.cookies.h2' } },
+  { component: Paragraph, props: { text: 'privacy-page.cookies.intro' } },
+  {
+    component: LabeledList,
+    props: {
+      items: [
+        { labelKey: 'privacy-page.cookies.voted-label', textKey: 'privacy-page.cookies.voted-text' },
+        { labelKey: 'privacy-page.cookies.choice-label', textKey: 'privacy-page.cookies.choice-text' },
+      ],
+    },
+  },
+  { component: Paragraph, props: { text: 'privacy-page.cookies.outro' } },
+
+  { component: Heading, props: { text: 'privacy-page.adsense.h2' } },
+  {
+    component: TransParagraph,
+    props: {
+      i18nKey: 'privacy-page.adsense.body',
+      links: [
+        { name: 'googlePrivacy', href: 'https://policies.google.com/privacy' },
+        { name: 'adSettings', href: 'https://adssettings.google.com' },
+      ],
+    },
+  },
+
+  { component: Heading, props: { text: 'privacy-page.sharing.h2' } },
+  { component: Paragraph, props: { text: 'privacy-page.sharing.body' } },
+
+  { component: Heading, props: { text: 'privacy-page.retention.h2' } },
+  { component: Paragraph, props: { text: 'privacy-page.retention.body' } },
+
+  { component: Heading, props: { text: 'privacy-page.contact.h2' } },
+  {
+    component: TransParagraph,
+    props: {
+      i18nKey: 'privacy-page.contact.body',
+      links: [{ name: 'email', href: 'mailto:privacy@redor.blue', email: true }],
     },
   },
 ];
