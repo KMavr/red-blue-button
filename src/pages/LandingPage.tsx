@@ -1,15 +1,22 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { animate } from 'framer-motion';
+import { animate, AnimatePresence, motion } from 'framer-motion';
 import VoteButton from '../components/VoteButton/VoteButton';
 import { useVote } from '../hooks/useVote';
 import { useLandingStats } from '../hooks/useLandingStats';
 import { cn } from '../utils/cn';
+import type { Choice } from '../types';
 
 function LandingPage() {
   const { t } = useTranslation();
   const { voting, error, submit } = useVote();
   const { total } = useLandingStats();
+  const [selectedChoice, setSelectedChoice] = useState<Choice | null>(null);
+
+  function handleVote(choice: Choice) {
+    setSelectedChoice(choice);
+    submit(choice);
+  }
   const countRef = useRef<HTMLSpanElement>(null);
   const displayedTotal = useRef(0);
 
@@ -48,10 +55,28 @@ function LandingPage() {
 
         {error && <p className={styles.error}>{error}</p>}
 
-        <div className={styles.buttons}>
-          <VoteButton color="red" disabled={voting} onVote={submit} />
-          <VoteButton color="blue" disabled={voting} onVote={submit} />
-        </div>
+        <motion.div layout className={styles.buttons}>
+          <AnimatePresence>
+            {(!selectedChoice || selectedChoice === 'red') && (
+              <VoteButton
+                key="red"
+                color="red"
+                disabled={voting}
+                onVote={handleVote}
+                isSelected={selectedChoice === 'red'}
+              />
+            )}
+            {(!selectedChoice || selectedChoice === 'blue') && (
+              <VoteButton
+                key="blue"
+                color="blue"
+                disabled={voting}
+                onVote={handleVote}
+                isSelected={selectedChoice === 'blue'}
+              />
+            )}
+          </AnimatePresence>
+        </motion.div>
 
         {total !== null && (
           <p className={styles.liveCount}>
