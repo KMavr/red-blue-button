@@ -1,8 +1,9 @@
 {
   "name": "red-blue-button",
   "description": "A global social dilemma experiment — press Red or Blue and see if humanity survives. React 19, TypeScript, Supabase, Vercel.",
+  "author": "Konstantinos Mavrikas",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
