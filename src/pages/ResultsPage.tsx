@@ -7,7 +7,7 @@ import { cn } from '../utils/cn';
 
 function ResultsPage() {
   const { t } = useTranslation();
-  const { results, loading, live, majority, survived } = useResults();
+  const { results, loading, live, error, majority, survived } = useResults();
   const { copied, share } = useShare(survived);
 
   if (loading) {
@@ -18,7 +18,7 @@ function ResultsPage() {
     );
   }
 
-  if (!results) {
+  if (error || !results) {
     return (
       <div className={styles.placeholder}>
         <p>{t('results-page.error')}</p>

@@ -18,6 +18,7 @@ export function useResults() {
   const [results, setResults] = useState<Results | null>(state?.results ?? null);
   const [loading, setLoading] = useState(!state?.results);
   const [live, setLive] = useState(false);
+  const [error, setError] = useState(false);
 
   const choice: Choice | undefined =
     state?.choice ?? (Cookies.get('last_choice') as Choice | undefined);
@@ -29,10 +30,20 @@ export function useResults() {
     }
 
     async function fetchResults() {
-      const data = await fetch('/api/results').then((r) => r.json());
-      setResults(data);
-      setLoading(false);
-      setLive(true);
+      try {
+        const res = await fetch('/api/results');
+        if (!res.ok) {
+          throw new Error();
+        }
+        const data = await res.json();
+        setResults(data);
+        setError(false);
+        setLoading(false);
+        setLive(true);
+      } catch {
+        if (!results) setError(true);
+        setLoading(false);
+      }
     }
 
     if (!state?.results) fetchResults();
@@ -46,5 +57,5 @@ export function useResults() {
 
   const survived = deriveSurvived(state?.survived, majority, choice);
 
-  return { results, loading, live, choice, majority, survived };
+  return { results, loading, live, error, choice, majority, survived };
 }
