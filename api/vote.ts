@@ -59,10 +59,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   await supabase.from('ip_log').upsert({ ip_hash: ipHash, last_vote: new Date().toISOString() });
 
   // Fetch current totals
-  const { data: totals } = await supabase.from('votes').select('choice');
+  const { data: totals } = await supabase.rpc('get_results');
 
-  const red = totals?.filter((v) => v.choice === 'red').length ?? 0;
-  const blue = totals?.filter((v) => v.choice === 'blue').length ?? 0;
+  const red = (totals?.red as number) ?? 0;
+  const blue = (totals?.blue as number) ?? 0;
   const total = red + blue;
   const redPct = total > 0 ? Math.round((red / total) * 100) : 50;
   const bluePct = 100 - redPct;
