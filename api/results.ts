@@ -25,5 +25,6 @@ export default async function handler(_req: VercelRequest, res: VercelResponse) 
     total: number;
   }[];
 
+  res.setHeader('Cache-Control', 's-maxage=5, stale-while-revalidate=10');
   return res.status(200).json({ red, blue, total, redPct, bluePct, countries });
 }
