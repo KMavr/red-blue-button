@@ -6,10 +6,14 @@ vi.mock('react-i18next', () => ({
   initReactI18next: { type: '3rdParty', init: vi.fn() },
 }));
 
+export const mockCookiesGet = vi.fn();
+export const mockCookiesSet = vi.fn();
+export const mockCookiesRemove = vi.fn();
+
 vi.mock('js-cookie', () => ({
   default: {
-    get: vi.fn(),
-    set: vi.fn(),
-    remove: vi.fn(),
+    get: mockCookiesGet,
+    set: mockCookiesSet,
+    remove: mockCookiesRemove,
   },
 }));

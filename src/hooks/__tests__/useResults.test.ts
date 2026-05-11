@@ -1,6 +1,5 @@
-import '../../__tests__/helpers/sharedMocks';
+import { mockCookiesGet } from '../../__tests__/helpers/sharedMocks';
 import { renderHook, act } from '@testing-library/react';
-import Cookies from 'js-cookie';
 import { useResults } from '../useResults';
 
 const mockNavigate = vi.fn();
@@ -10,8 +9,6 @@ vi.mock('react-router-dom', () => ({
   useNavigate: () => mockNavigate,
   useLocation: () => ({ state: mockLocationState }),
 }));
-
-const mockCookiesGet = vi.mocked(Cookies.get);
 
 const MOCK_RESULTS = {
   red: 40,
@@ -119,7 +116,7 @@ describe('useResults', () => {
 
   describe('choice fallback to cookie', () => {
     it('should read choice from last_choice cookie when no state.choice', () => {
-      mockCookiesGet.mockImplementation((key) => {
+      mockCookiesGet.mockImplementation((key: string) => {
         if (key === 'voted') return '1';
         if (key === 'last_choice') return 'blue';
         return undefined;

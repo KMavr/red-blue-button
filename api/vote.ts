@@ -1,6 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { createClient } from '@supabase/supabase-js';
 import { createHash } from 'crypto';
+import { deriveSurvived } from '../src/utils/resultsUtils';
 
 const supabase = createClient(
   process.env.SUPABASE_URL!.replace(/\/$/, ''),
@@ -67,8 +68,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const redPct = total > 0 ? Math.round((red / total) * 100) : 50;
   const bluePct = 100 - redPct;
 
-  const blueMajority = blue >= red;
-  const survived = blueMajority ? true : choice === 'red';
+  const majority = blue >= red ? 'blue' : 'red';
+  const survived = deriveSurvived(undefined, majority, choice) as boolean;
 
   return res.status(200).json({
     survived,

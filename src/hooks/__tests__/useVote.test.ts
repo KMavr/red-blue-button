@@ -1,10 +1,7 @@
-import '../../__tests__/helpers/mockSetup';
 import { mockNavigate } from '../../__tests__/helpers/mockSetup';
+import { mockCookiesSet } from '../../__tests__/helpers/sharedMocks';
 import { renderHook, act, waitFor } from '@testing-library/react';
-import Cookies from 'js-cookie';
 import { useVote } from '../useVote';
-
-const mockCookiesSet = vi.mocked(Cookies.set);
 
 function mockFetch(status: number, body: unknown) {
   vi.stubGlobal(
