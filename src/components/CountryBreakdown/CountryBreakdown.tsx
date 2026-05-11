@@ -9,7 +9,7 @@ interface CountryBreakdownProps {
 
 function CountryBreakdown({ countries }: CountryBreakdownProps) {
   const { i18n } = useTranslation();
-  if (countries.length === 0) return null;
+  if (!countries || countries.length === 0) return null;
 
   return (
     <div className={styles.container}>
