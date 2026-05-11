@@ -14,8 +14,8 @@ export function useLandingStats() {
         const data = await res.json();
         prevTotal.current = total;
         setTotal(data.total);
-      } catch {
-        // silently ignore
+      } catch (error) {
+        console.error(error);
       }
     }
 

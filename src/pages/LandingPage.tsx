@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
+import { Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { animate, AnimatePresence, motion } from 'framer-motion';
+import Cookies from 'js-cookie';
 import VoteButton from '../components/VoteButton/VoteButton';
 import { useVote } from '../hooks/useVote';
 import { useLandingStats } from '../hooks/useLandingStats';
@@ -34,6 +36,10 @@ function LandingPage() {
     });
     displayedTotal.current = to;
   }, [total]);
+
+  if (Cookies.get('voted')) {
+    return <Navigate to="/results" replace />;
+  }
 
   return (
     <div className={styles.wrapper}>
