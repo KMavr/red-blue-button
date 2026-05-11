@@ -57,6 +57,10 @@ src/
     resultsUtils.ts   # Derive survived status from vote data
 
 translations/        # JSON translation files (en, el, es, pt, fr, de, it, ja, ko, zh, ru, ar)
+
+public/
+  og.png           # Open Graph image used in social share meta tags
+  og.svg           # Source file for og.png (not served directly)
 ```
 
 ## How Voting Works
