@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import LanguageSelector from './components/LanguageSelector/LanguageSelector';
 import Footer from './components/Footer/Footer';
 import { useScrollToTop } from './hooks/useScrollToTop';
+import Spinner from './components/Spinner/Spinner';
 
 const LandingPage = lazy(() => import('./pages/LandingPage'));
 const ResultsPage = lazy(() => import('./pages/ResultsPage'));
@@ -16,7 +17,7 @@ function AppContent() {
   return (
     <>
       <LanguageSelector />
-      <Suspense>
+      <Suspense fallback={<Spinner />}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/results" element={<ResultsPage />} />
