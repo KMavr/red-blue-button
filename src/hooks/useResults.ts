@@ -29,9 +29,10 @@ export function useResults() {
       return;
     }
 
-    async function fetchResults() {
+    const controller = new AbortController();
+    const fetchResults = async () => {
       try {
-        const res = await fetch('/api/results');
+        const res = await fetch('/api/results', { signal: controller.signal });
         if (!res.ok) {
           throw new Error();
         }
@@ -44,12 +45,17 @@ export function useResults() {
         if (!results) setError(true);
         setLoading(false);
       }
+    };
+
+    if (!state?.results) {
+      fetchResults();
     }
 
-    if (!state?.results) fetchResults();
-
     const id = setInterval(fetchResults, POLL_INTERVAL);
-    return () => clearInterval(id);
+    return () => {
+      clearInterval(id);
+      controller.abort();
+    };
   }, [navigate, state]);
 
   let majority: 'blue' | 'red' | null = null;
