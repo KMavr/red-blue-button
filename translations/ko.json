@@ -107,5 +107,8 @@
   "privacy-page.contact.body": "문의: <email>privacy@redor.blue</email>",
   "common.back": "← 뒤로",
   "footer.dilemma": "딜레마",
-  "footer.privacy": "개인정보 처리방침"
+  "footer.privacy": "개인정보 처리방침",
+  "common.unknown": "알 수 없음",
+  "results-page.country-breakdown.sort.alpha": "알파벳순",
+  "results-page.country-breakdown.sort.votes": "투표 수"
 }

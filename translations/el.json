@@ -107,5 +107,8 @@
   "privacy-page.contact.body": "Για ερωτήσεις επικοινωνήστε στο <email>privacy@redor.blue</email>.",
   "common.back": "← Πίσω",
   "footer.dilemma": "Το Δίλημμα",
-  "footer.privacy": "Πολιτική Απορρήτου"
+  "footer.privacy": "Πολιτική Απορρήτου",
+  "common.unknown": "Άγνωστο",
+  "results-page.country-breakdown.sort.alpha": "Αλφαβητικά",
+  "results-page.country-breakdown.sort.votes": "Αριθμός ψήφων"
 }

@@ -107,5 +107,8 @@
   "privacy-page.contact.body": "お問い合わせ: <email>privacy@redor.blue</email>",
   "common.back": "← 戻る",
   "footer.dilemma": "ジレンマ",
-  "footer.privacy": "プライバシーポリシー"
+  "footer.privacy": "プライバシーポリシー",
+  "common.unknown": "不明",
+  "results-page.country-breakdown.sort.alpha": "アルファベット順",
+  "results-page.country-breakdown.sort.votes": "投票数"
 }

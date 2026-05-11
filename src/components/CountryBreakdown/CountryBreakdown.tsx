@@ -1,27 +1,57 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { CountryResult } from '../../types';
 import { countryFlag, countryName } from '../../utils/countryUtils';
 import { cn } from '../../utils/cn';
+
+type SortMode = 'votes' | 'alpha';
 
 interface CountryBreakdownProps {
   countries: CountryResult[];
 }
 
 function CountryBreakdown({ countries }: CountryBreakdownProps) {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [sort, setSort] = useState<SortMode>('votes');
+
   if (!countries || countries.length === 0) return null;
+
+  const sortedCountries = [...countries].sort((a, b) =>
+    sort === 'votes'
+      ? b.total - a.total
+      : countryName(a.country, i18n.language, t('common.unknown')).localeCompare(
+          countryName(b.country, i18n.language, t('common.unknown')),
+        ),
+  );
 
   return (
     <div className={styles.container}>
-      <h3 className={styles.heading}>By Country</h3>
+      <div className={styles.header}>
+        <h3 className={styles.heading}>{t('results-page.country-breakdown.title')}</h3>
+        <div className={styles.sortToggle}>
+          <button
+            className={cn(styles.sortBtn, sort === 'alpha' && styles.sortBtnActive)}
+            onClick={() => setSort('alpha')}>
+            {t('results-page.country-breakdown.sort.alpha')}
+          </button>
+          <span className={styles.sortDivider}>|</span>
+          <button
+            className={cn(styles.sortBtn, sort === 'votes' && styles.sortBtnActive)}
+            onClick={() => setSort('votes')}>
+            {t('results-page.country-breakdown.sort.votes')}
+          </button>
+        </div>
+      </div>
       <ul className={styles.list}>
-        {countries.map((c) => {
+        {sortedCountries.map((c) => {
           const redPct = Math.round((c.red / c.total) * 100);
           const bluePct = 100 - redPct;
           return (
             <li key={c.country} className={styles.item}>
               <span className={styles.flag}>{countryFlag(c.country)}</span>
-              <span className={styles.countryName}>{countryName(c.country, i18n.language)}</span>
+              <span className={styles.countryName}>
+                {countryName(c.country, i18n.language, t('common.unknown'))}
+              </span>
               <div className={styles.percentages}>
                 <span className={styles.redPct}>{redPct}%</span>
                 <div className={styles.miniBar}>
@@ -41,10 +71,18 @@ function CountryBreakdown({ countries }: CountryBreakdownProps) {
 
 const styles = {
   container: cn('border-line border-t pt-8'),
+  header: cn('mb-5 flex items-center justify-between'),
   heading: cn(
-    'text-secondary mb-5 text-[0.7rem] tracking-[0.2em] uppercase',
+    'text-secondary text-[0.7rem] tracking-[0.2em] uppercase',
     'rtl:not-uppercase rtl:text-sm rtl:tracking-normal',
   ),
+  sortToggle: cn('flex items-center gap-1.5'),
+  sortBtn: cn(
+    'text-secondary cursor-pointer text-[0.65rem] tracking-[0.1em] uppercase transition-colors duration-150',
+    'hover:text-primary',
+  ),
+  sortBtnActive: cn('text-primary'),
+  sortDivider: cn('text-secondary/40 text-[0.65rem]'),
   list: cn('flex list-none flex-col gap-[0.6rem]'),
   item: cn(
     'grid grid-cols-[1.5rem_1fr_auto_2.5rem] items-center gap-3 text-[0.85rem]',

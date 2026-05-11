@@ -104,5 +104,8 @@
   "privacy-page.contact.body": "If you have any questions about this policy, you can reach us at <email>privacy@redor.blue</email>.",
   "common.back": "← Back",
   "footer.dilemma": "The Dilemma",
-  "footer.privacy": "Privacy Policy"
+  "footer.privacy": "Privacy Policy",
+  "common.unknown": "Unknown",
+  "results-page.country-breakdown.sort.alpha": "Alphabetical",
+  "results-page.country-breakdown.sort.votes": "Number of votes"
 }

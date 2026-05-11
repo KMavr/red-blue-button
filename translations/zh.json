@@ -107,5 +107,8 @@
   "privacy-page.contact.body": "邮箱：<email>privacy@redor.blue</email>",
   "common.back": "← 返回",
   "footer.dilemma": "困境",
-  "footer.privacy": "隐私政策"
+  "footer.privacy": "隐私政策",
+  "common.unknown": "未知",
+  "results-page.country-breakdown.sort.alpha": "字母顺序",
+  "results-page.country-breakdown.sort.votes": "票数"
 }

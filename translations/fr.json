@@ -107,5 +107,8 @@
   "privacy-page.contact.body": "Pour toute question : <email>privacy@redor.blue</email>",
   "common.back": "← Retour",
   "footer.dilemma": "Le Dilemme",
-  "footer.privacy": "Politique de Confidentialité"
+  "footer.privacy": "Politique de Confidentialité",
+  "common.unknown": "Inconnu",
+  "results-page.country-breakdown.sort.alpha": "Alphabétique",
+  "results-page.country-breakdown.sort.votes": "Nombre de votes"
 }

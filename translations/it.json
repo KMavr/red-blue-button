@@ -107,5 +107,8 @@
   "privacy-page.contact.body": "Per domande: <email>privacy@redor.blue</email>",
   "common.back": "← Indietro",
   "footer.dilemma": "Il Dilemma",
-  "footer.privacy": "Informativa sulla Privacy"
+  "footer.privacy": "Informativa sulla Privacy",
+  "common.unknown": "Sconosciuto",
+  "results-page.country-breakdown.sort.alpha": "Alfabetico",
+  "results-page.country-breakdown.sort.votes": "Numero di voti"
 }

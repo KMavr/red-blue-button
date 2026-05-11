@@ -7,8 +7,8 @@ export function countryFlag(code: string): string {
     .join('');
 }
 
-export function countryName(code: string, locale: string): string {
-  if (code === 'XX') return 'Unknown';
+export function countryName(code: string, locale: string, unknownLabel = 'Unknown'): string {
+  if (code === 'XX') return unknownLabel;
   try {
     return new Intl.DisplayNames([locale], { type: 'region' }).of(code) ?? code;
   } catch {

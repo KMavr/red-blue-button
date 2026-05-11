@@ -107,5 +107,8 @@
   "privacy-page.contact.body": "Email: <email>privacy@redor.blue</email>",
   "common.back": "← Назад",
   "footer.dilemma": "Дилемма",
-  "footer.privacy": "Политика конфиденциальности"
+  "footer.privacy": "Политика конфиденциальности",
+  "common.unknown": "Неизвестно",
+  "results-page.country-breakdown.sort.alpha": "По алфавиту",
+  "results-page.country-breakdown.sort.votes": "Количество голосов"
 }
