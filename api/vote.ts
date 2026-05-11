@@ -31,7 +31,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   const ip = getIp(req);
   const ipHash = hashIp(ip);
-  const country = (req.headers['x-vercel-ip-country'] as string) ?? null;
+  const country = (req.headers['x-vercel-ip-country'] as string) ?? 'XX';
 
   // Check for duplicate vote via IP
   const cutoff = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();

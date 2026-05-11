@@ -18,12 +18,14 @@ export default async function handler(_req: VercelRequest, res: VercelResponse) 
   const total = red + blue;
   const redPct = total > 0 ? Math.round((red / total) * 100) : 50;
   const bluePct = 100 - redPct;
-  const countries = (data.countries ?? []) as {
-    country: string;
-    red: number;
-    blue: number;
-    total: number;
-  }[];
+  const countries = (
+    (data.countries ?? []) as {
+      country: string | null;
+      red: number;
+      blue: number;
+      total: number;
+    }[]
+  ).map((c) => ({ ...c, country: c.country ?? 'XX' }));
 
   res.setHeader('Cache-Control', 's-maxage=5, stale-while-revalidate=10');
   return res.status(200).json({ red, blue, total, redPct, bluePct, countries });
