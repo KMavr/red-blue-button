@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { FaGithubSquare } from 'react-icons/fa';
 import { cn } from '../../utils/cn';
 
 function Footer() {
@@ -13,6 +14,14 @@ function Footer() {
       <Link to="/privacy" className={styles.link}>
         {t('footer.privacy')}
       </Link>
+      <a
+        href="https://github.com/KMavr/red-blue-button"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.github}
+        aria-label="View source on GitHub">
+        <FaGithubSquare />
+      </a>
     </footer>
   );
 }
@@ -23,6 +32,7 @@ const styles = {
   ),
   copy: cn('text-secondary text-xs tracking-wider'),
   link: cn('text-secondary hover:text-primary text-xs tracking-wider no-underline'),
+  github: cn('text-secondary hover:text-primary flex items-center text-base leading-none'),
 };
 
 export default Footer;
