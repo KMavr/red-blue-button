@@ -110,5 +110,11 @@
   "footer.privacy": "Datenschutzrichtlinie",
   "common.unknown": "Unbekannt",
   "results-page.country-breakdown.sort.alpha": "Alphabetisch",
-  "results-page.country-breakdown.sort.votes": "Anzahl Stimmen"
+  "results-page.country-breakdown.sort.votes": "Anzahl Stimmen",
+  "landing-page.context.body": "Ein live-globales Koordinationsexperiment aus der Spieltheorie. Keine Kommunikation, keine zweite Chance — das Ergebnis hängt vollständig davon ab, was alle anderen entscheiden.",
+  "landing-page.context.link-about": "Das Dilemma",
+  "landing-page.context.link-why-blue": "Warum Blau?",
+  "landing-page.context.link-why-red": "Warum Rot?",
+  "results-page.context.body": "Dieses Dilemma spiegelt jedes große kollektive Handlungsproblem der Menschheit wider — Klima, Rüstungskontrolle, öffentliche Gesundheit. Ob Vertrauen unter echter Unsicherheit rational ist, ist genau die Frage.",
+  "results-page.context.link": "Über dieses Dilemma →"
 }

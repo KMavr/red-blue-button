@@ -110,5 +110,11 @@
   "footer.privacy": "Politique de Confidentialité",
   "common.unknown": "Inconnu",
   "results-page.country-breakdown.sort.alpha": "Alphabétique",
-  "results-page.country-breakdown.sort.votes": "Nombre de votes"
+  "results-page.country-breakdown.sort.votes": "Nombre de votes",
+  "landing-page.context.body": "Une expérience de coordination mondiale en direct ancrée dans la théorie des jeux. Aucune communication, aucune seconde chance — le résultat dépend entièrement de ce que tout le monde décide.",
+  "landing-page.context.link-about": "Le Dilemme",
+  "landing-page.context.link-why-blue": "Pourquoi bleu ?",
+  "landing-page.context.link-why-red": "Pourquoi rouge ?",
+  "results-page.context.body": "Ce dilemme s'applique à chaque grand problème d'action collective auquel l'humanité est confrontée — le climat, le contrôle des armements, la santé publique. La question de savoir si la confiance est rationnelle face à une véritable incertitude est exactement cela.",
+  "results-page.context.link": "À propos de ce dilemme →"
 }

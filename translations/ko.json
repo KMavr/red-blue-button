@@ -110,5 +110,11 @@
   "footer.privacy": "개인정보 처리방침",
   "common.unknown": "알 수 없음",
   "results-page.country-breakdown.sort.alpha": "알파벳순",
-  "results-page.country-breakdown.sort.votes": "투표 수"
+  "results-page.country-breakdown.sort.votes": "투표 수",
+  "landing-page.context.body": "게임 이론에 기반한 실시간 글로벌 조정 실험. 소통 없음, 두 번째 기회 없음 — 결과는 전적으로 다른 모든 사람이 무엇을 선택하느냐에 달려 있습니다.",
+  "landing-page.context.link-about": "이 딜레마에 대해",
+  "landing-page.context.link-why-blue": "왜 파란색?",
+  "landing-page.context.link-why-red": "왜 빨간색?",
+  "results-page.context.body": "이 딜레마는 인류가 직면한 모든 주요 집단 행동 문제 — 기후, 군비 통제, 공중 보건 — 에 적용됩니다. 진정한 불확실성 속에서 신뢰가 합리적인지가 바로 그 질문입니다.",
+  "results-page.context.link": "이 딜레마에 대해 →"
 }

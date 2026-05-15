@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { animate, AnimatePresence, motion } from 'framer-motion';
 import Cookies from 'js-cookie';
@@ -90,6 +90,21 @@ function LandingPage() {
             <span ref={countRef}>{total.toLocaleString()}</span> {t('landing-page.live-count')}
           </p>
         )}
+
+        <div className={styles.context}>
+          <p className={styles.contextBody}>{t('landing-page.context.body')}</p>
+          <div className={styles.contextLinks}>
+            <Link to="/about" className={styles.contextLink}>
+              {t('landing-page.context.link-about')}
+            </Link>
+            <Link to="/why-blue" className={cn(styles.contextLink, 'text-blue')}>
+              {t('landing-page.context.link-why-blue')}
+            </Link>
+            <Link to="/why-red" className={cn(styles.contextLink, 'text-red')}>
+              {t('landing-page.context.link-why-red')}
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -97,7 +112,7 @@ function LandingPage() {
 
 const styles = {
   wrapper: cn('flex min-h-screen items-center justify-center px-5 pt-6 pb-20'),
-  inner: cn('w-full text-center'),
+  inner: cn('w-full max-w-2xl text-center'),
   header: cn(
     'text-secondary mb-5 text-[0.7rem] tracking-[0.25em] uppercase',
     'rtl:text-[0.9rem] rtl:tracking-normal rtl:normal-case',
@@ -111,6 +126,12 @@ const styles = {
   liveCount: cn('text-secondary mt-6 flex items-center justify-center gap-2 text-[0.85rem]'),
   error: cn('text-red mb-4 text-[0.875rem]'),
   buttons: cn('flex flex-wrap justify-center gap-5'),
+  context: cn('border-line mt-10 border-t pt-8 text-left rtl:text-right'),
+  contextBody: cn('text-secondary mb-4 text-[0.875rem] leading-relaxed'),
+  contextLinks: cn('flex flex-wrap gap-5'),
+  contextLink: cn(
+    'text-secondary hover:text-primary text-[0.875rem] font-semibold no-underline hover:underline',
+  ),
 };
 
 export default LandingPage;

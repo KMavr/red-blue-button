@@ -110,5 +110,11 @@
   "footer.privacy": "隐私政策",
   "common.unknown": "未知",
   "results-page.country-breakdown.sort.alpha": "字母顺序",
-  "results-page.country-breakdown.sort.votes": "票数"
+  "results-page.country-breakdown.sort.votes": "票数",
+  "landing-page.context.body": "一个基于博弈论的全球实时协调实验。没有沟通，没有第二次机会——结果完全取决于所有人的选择。",
+  "landing-page.context.link-about": "关于此困境",
+  "landing-page.context.link-why-blue": "为什么选蓝？",
+  "landing-page.context.link-why-red": "为什么选红？",
+  "results-page.context.body": "这一困境映射了人类面临的每一个重大集体行动问题——气候、军备控制、公共卫生。在真正的不确定性下信任是否理性，正是这个问题的核心。",
+  "results-page.context.link": "关于此困境 →"
 }

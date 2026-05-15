@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import ResultBar from '../components/ResultBar/ResultBar';
 import CountryBreakdown from '../components/CountryBreakdown/CountryBreakdown';
 import { useResults } from '../hooks/useResults';
@@ -62,6 +63,13 @@ function ResultsPage() {
         </button>
 
         <CountryBreakdown countries={results.countries} />
+
+        <div className={styles.context}>
+          <p className={styles.contextBody}>{t('results-page.context.body')}</p>
+          <Link to="/about" className={styles.contextLink}>
+            {t('results-page.context.link')}
+          </Link>
+        </div>
       </div>
     </div>
   );
@@ -90,6 +98,11 @@ const styles = {
     'text-primary font-display text-[0.9rem] font-semibold tracking-[0.04em]',
     'mb-10 cursor-pointer transition-[background-color,border-color] duration-150',
     'hover:border-white/15 hover:bg-white/6',
+  ),
+  context: cn('border-line mt-10 border-t pt-8'),
+  contextBody: cn('text-secondary mb-3 text-[0.875rem] leading-relaxed'),
+  contextLink: cn(
+    'text-secondary hover:text-primary text-[0.875rem] font-semibold no-underline hover:underline',
   ),
 };
 

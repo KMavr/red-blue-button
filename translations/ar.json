@@ -110,5 +110,11 @@
   "footer.privacy": "سياسة الخصوصية",
   "common.unknown": "غير معروف",
   "results-page.country-breakdown.sort.alpha": "أبجدي",
-  "results-page.country-breakdown.sort.votes": "عدد الأصوات"
+  "results-page.country-breakdown.sort.votes": "عدد الأصوات",
+  "landing-page.context.body": "تجربة تنسيق عالمية مباشرة مستندة إلى نظرية الألعاب. لا تواصل، لا فرصة ثانية — النتيجة تعتمد كلياً على ما يقرره الجميع.",
+  "landing-page.context.link-about": "المعضلة",
+  "landing-page.context.link-why-blue": "لماذا الأزرق؟",
+  "landing-page.context.link-why-red": "لماذا الأحمر؟",
+  "results-page.context.body": "تنعكس هذه المعضلة على كل مشكلة عمل جماعي كبرى تواجهها البشرية — المناخ، ضبط التسلح، الصحة العامة. هل الثقة عقلانية في ظل عدم اليقين الحقيقي؟ هذا بالضبط هو السؤال.",
+  "results-page.context.link": "حول هذه المعضلة →"
 }

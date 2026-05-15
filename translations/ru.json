@@ -110,5 +110,11 @@
   "footer.privacy": "Политика конфиденциальности",
   "common.unknown": "Неизвестно",
   "results-page.country-breakdown.sort.alpha": "По алфавиту",
-  "results-page.country-breakdown.sort.votes": "Количество голосов"
+  "results-page.country-breakdown.sort.votes": "Количество голосов",
+  "landing-page.context.body": "Живой глобальный эксперимент по координации, основанный на теории игр. Без коммуникации, без второго шанса — результат полностью зависит от того, что решат все остальные.",
+  "landing-page.context.link-about": "Дилемма",
+  "landing-page.context.link-why-blue": "Почему синий?",
+  "landing-page.context.link-why-red": "Почему красный?",
+  "results-page.context.body": "Эта дилемма касается каждой крупной проблемы коллективных действий человечества — климата, контроля над вооружениями, общественного здравоохранения. Является ли доверие рациональным в условиях подлинной неопределённости — именно это и есть вопрос.",
+  "results-page.context.link": "Об этой дилемме →"
 }

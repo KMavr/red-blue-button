@@ -110,5 +110,11 @@
   "footer.privacy": "Informativa sulla Privacy",
   "common.unknown": "Sconosciuto",
   "results-page.country-breakdown.sort.alpha": "Alfabetico",
-  "results-page.country-breakdown.sort.votes": "Numero di voti"
+  "results-page.country-breakdown.sort.votes": "Numero di voti",
+  "landing-page.context.body": "Un esperimento di coordinamento globale in tempo reale radicato nella teoria dei giochi. Nessuna comunicazione, nessuna seconda possibilità — il risultato dipende interamente da ciò che tutti gli altri decidono.",
+  "landing-page.context.link-about": "Il Dilemma",
+  "landing-page.context.link-why-blue": "Perché blu?",
+  "landing-page.context.link-why-red": "Perché rosso?",
+  "results-page.context.body": "Questo dilemma si applica a ogni grande problema di azione collettiva che l'umanità affronta — clima, controllo degli armamenti, salute pubblica. Se la fiducia sia razionale in condizioni di vera incertezza è esattamente la domanda.",
+  "results-page.context.link": "Su questo dilemma →"
 }

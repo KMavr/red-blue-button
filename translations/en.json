@@ -107,5 +107,11 @@
   "footer.privacy": "Privacy Policy",
   "common.unknown": "Unknown",
   "results-page.country-breakdown.sort.alpha": "Alphabetical",
-  "results-page.country-breakdown.sort.votes": "Number of votes"
+  "results-page.country-breakdown.sort.votes": "Number of votes",
+  "landing-page.context.body": "A live global coordination experiment rooted in game theory. No communication, no second chances — the outcome depends entirely on what everyone else decides.",
+  "landing-page.context.link-about": "The Dilemma",
+  "landing-page.context.link-why-blue": "Why blue?",
+  "landing-page.context.link-why-red": "Why red?",
+  "results-page.context.body": "This dilemma maps onto every major collective action problem humanity faces — climate, arms control, public health. Whether trust is rational under genuine uncertainty is exactly the question.",
+  "results-page.context.link": "About this dilemma →"
 }

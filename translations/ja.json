@@ -110,5 +110,11 @@
   "footer.privacy": "プライバシーポリシー",
   "common.unknown": "不明",
   "results-page.country-breakdown.sort.alpha": "アルファベット順",
-  "results-page.country-breakdown.sort.votes": "投票数"
+  "results-page.country-breakdown.sort.votes": "投票数",
+  "landing-page.context.body": "ゲーム理論に基づいたライブ・グローバル調整実験。コミュニケーションなし、やり直しなし — 結果は他の全員の決断に完全に依存します。",
+  "landing-page.context.link-about": "このジレンマについて",
+  "landing-page.context.link-why-blue": "なぜ青？",
+  "landing-page.context.link-why-red": "なぜ赤？",
+  "results-page.context.body": "このジレンマは、気候変動、軍備管理、公衆衛生など、人類が直面するあらゆる集団行動問題に当てはまります。真の不確実性のもとで信頼が合理的かどうかが、まさにその問いです。",
+  "results-page.context.link": "このジレンマについて →"
 }

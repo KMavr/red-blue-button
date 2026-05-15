@@ -110,5 +110,11 @@
   "footer.privacy": "Πολιτική Απορρήτου",
   "common.unknown": "Άγνωστο",
   "results-page.country-breakdown.sort.alpha": "Αλφαβητικά",
-  "results-page.country-breakdown.sort.votes": "Αριθμός ψήφων"
+  "results-page.country-breakdown.sort.votes": "Αριθμός ψήφων",
+  "landing-page.context.body": "Ένα ζωντανό παγκόσμιο πείραμα συντονισμού βασισμένο στη θεωρία παιγνίων. Χωρίς επικοινωνία, χωρίς δεύτερη ευκαιρία — το αποτέλεσμα εξαρτάται εξ ολοκλήρου από τις επιλογές όλων.",
+  "landing-page.context.link-about": "Το Δίλημμα",
+  "landing-page.context.link-why-blue": "Γιατί μπλε;",
+  "landing-page.context.link-why-red": "Γιατί κόκκινο;",
+  "results-page.context.body": "Αυτό το δίλημμα αντικατοπτρίζει κάθε μεγάλο πρόβλημα συλλογικής δράσης — κλίμα, έλεγχος εξοπλισμών, δημόσια υγεία. Εάν η εμπιστοσύνη είναι ορθολογική υπό πραγματική αβεβαιότητα είναι ακριβώς η ερώτηση.",
+  "results-page.context.link": "Σχετικά με αυτό το δίλημμα →"
 }
