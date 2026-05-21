@@ -12,7 +12,10 @@ function BackLink() {
 }
 
 const styles = {
-  link: cn('text-secondary hover:text-primary mb-6 inline-block text-[0.85rem] no-underline'),
+  link: cn(
+    'text-secondary hover:text-primary mb-6 inline-block rounded-xs text-sm no-underline',
+    'focus-visible:outline-focus focus-visible:outline-2 focus-visible:outline-offset-2',
+  ),
 };
 
 export default BackLink;

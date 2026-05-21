@@ -12,7 +12,7 @@ function Heading({ text }: HeadingProps) {
 }
 
 const styles = {
-  h2: cn('mt-8 mb-2 text-base font-bold tracking-[0.02em]'),
+  h2: cn('mt-10 mb-3 text-xl font-bold tracking-[-0.01em]'),
 };
 
 export default Heading;

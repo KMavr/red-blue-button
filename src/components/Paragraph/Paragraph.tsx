@@ -12,7 +12,7 @@ function Paragraph({ text }: ParagraphProps) {
 }
 
 const styles = {
-  body: cn('text-secondary mb-2 text-[0.9rem] leading-[1.7]'),
+  body: cn('text-secondary mb-2 text-sm leading-[1.7]'),
 };
 
 export default Paragraph;

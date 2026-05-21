@@ -22,9 +22,12 @@ function ExternalLinks({ items }: ExternalLinksProps) {
 }
 
 const styles = {
-  body: cn('text-secondary mb-2 text-[0.9rem] leading-[1.7]'),
+  body: cn('text-secondary mb-2 text-sm leading-[1.7]'),
   list: cn('mb-2 list-disc pl-5'),
-  link: cn('text-blue no-underline hover:underline'),
+  link: cn(
+    'text-blue rounded-xs no-underline hover:underline',
+    'focus-visible:outline-focus focus-visible:outline-2 focus-visible:outline-offset-2',
+  ),
 };
 
 export default ExternalLinks;

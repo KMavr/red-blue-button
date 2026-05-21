@@ -32,8 +32,11 @@ function TransParagraph({ i18nKey, links }: TransParagraphProps) {
 }
 
 const styles = {
-  body: cn('text-secondary mb-2 text-[0.9rem] leading-[1.7]'),
-  link: cn('text-blue no-underline hover:underline'),
+  body: cn('text-secondary mb-2 text-sm leading-[1.7]'),
+  link: cn(
+    'text-blue rounded-xs no-underline hover:underline',
+    'focus-visible:outline-focus focus-visible:outline-2 focus-visible:outline-offset-2',
+  ),
 };
 
 export default TransParagraph;

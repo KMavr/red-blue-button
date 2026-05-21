@@ -20,7 +20,7 @@ function ColoredList({ items }: ColoredListProps) {
 }
 
 const styles = {
-  body: cn('text-secondary mb-2 text-[0.9rem] leading-[1.7]'),
+  body: cn('text-secondary mb-2 text-sm leading-[1.7]'),
   list: cn('mb-2 list-disc pl-5'),
   red: cn('text-red font-semibold'),
   blue: cn('text-blue font-semibold'),

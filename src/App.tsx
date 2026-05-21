@@ -15,21 +15,23 @@ const WhyRedPage = lazy(() => import('./pages/WhyRedPage'));
 function AppContent() {
   useScrollToTop();
   return (
-    <>
+    <div className="flex min-h-dvh flex-col">
       <LanguageSelector />
-      <Suspense fallback={<Spinner />}>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/results" element={<ResultsPage />} />
-          <Route path="/privacy" element={<PrivacyPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/why-blue" element={<WhyBluePage />} />
-          <Route path="/why-red" element={<WhyRedPage />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </Suspense>
+      <main className="flex grow flex-col">
+        <Suspense fallback={<Spinner />}>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/results" element={<ResultsPage />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/why-blue" element={<WhyBluePage />} />
+            <Route path="/why-red" element={<WhyRedPage />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </Suspense>
+      </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

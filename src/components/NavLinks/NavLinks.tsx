@@ -22,12 +22,16 @@ function NavLinks({ links, className }: NavLinksProps) {
   );
 }
 
+const focusRing = cn(
+  'focus-visible:outline-focus rounded-xs focus-visible:outline-2 focus-visible:outline-offset-2',
+);
+
 const styles = {
-  navLinks: cn('mt-8 mb-2 flex gap-6'),
+  navLinks: cn('mt-8 mb-2 flex flex-wrap gap-x-6 gap-y-2'),
   navLink: {
-    blue: cn('text-blue text-[0.9rem] font-semibold no-underline hover:underline'),
-    red: cn('text-red text-[0.9rem] font-semibold no-underline hover:underline'),
-    muted: cn('text-secondary hover:text-primary text-[0.9rem] no-underline'),
+    blue: cn('text-blue text-sm font-semibold no-underline hover:underline', focusRing),
+    red: cn('text-red text-sm font-semibold no-underline hover:underline', focusRing),
+    muted: cn('text-secondary hover:text-primary text-sm no-underline', focusRing),
   },
 };
 

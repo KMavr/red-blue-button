@@ -49,10 +49,10 @@ const styles = {
     'bg-[linear-gradient(90deg,#3b82f6,#1d3470)]',
   ),
   labels: cn(
-    'flex items-center justify-between text-[0.8rem] font-bold tracking-[0.06em] rtl:flex-row-reverse',
+    'flex items-center justify-between text-xs font-bold tracking-[0.06em] rtl:flex-row-reverse',
   ),
   redLabel: cn('text-red'),
-  totalLabel: cn('text-secondary flex items-center gap-[0.4rem] text-[0.75rem] font-normal'),
+  totalLabel: cn('text-secondary flex items-center gap-1.5 text-xs font-normal'),
   blueLabel: cn('text-blue'),
 };
 

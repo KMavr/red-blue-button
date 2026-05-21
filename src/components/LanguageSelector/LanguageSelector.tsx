@@ -84,9 +84,16 @@ function LanguageSelector() {
             <li
               key={code}
               role="option"
+              tabIndex={0}
               aria-selected={code === currentCode}
               className={styles.option({ active: code === currentCode })}
-              onClick={() => select(code)}>
+              onClick={() => select(code)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  select(code);
+                }
+              }}>
               {label}
             </li>
           ))}
@@ -103,10 +110,11 @@ const styles = {
   ),
   trigger: cn(
     'bg-surface border-line flex items-center gap-2 rounded-lg border',
-    'text-secondary font-display py-[0.4rem] pr-2.5 pl-3 text-[0.75rem]',
+    'text-secondary font-display py-1.5 pr-2.5 pl-3 text-xs',
     'cursor-pointer transition-[border-color,color] duration-150',
     'hover:text-primary hover:border-white/20',
-    'max-[480px]:py-[0.35rem] max-[480px]:pr-2 max-[480px]:pl-2.5 max-[480px]:text-[0.7rem]',
+    'focus-visible:outline-focus focus-visible:outline-2 focus-visible:outline-offset-2',
+    'max-[480px]:text-2xs max-[480px]:py-1 max-[480px]:pr-2 max-[480px]:pl-2.5',
   ),
   menu: cn(
     'absolute top-full right-0 mt-1 rtl:right-auto rtl:left-0',
@@ -116,7 +124,8 @@ const styles = {
   ),
   option: cva(
     cn(
-      'font-display cursor-pointer px-3 py-[0.45rem] text-[0.75rem] whitespace-nowrap transition-colors duration-100',
+      'font-display cursor-pointer px-3 py-2 text-xs whitespace-nowrap transition-colors duration-100',
+      'focus-visible:outline-focus outline-none focus-visible:outline-2 focus-visible:-outline-offset-2',
     ),
     {
       variants: {

@@ -72,37 +72,35 @@ function CountryBreakdown({ countries }: CountryBreakdownProps) {
 const styles = {
   container: cn('border-line border-t pt-8'),
   header: cn('mb-5 flex items-center justify-between'),
-  heading: cn(
-    'text-secondary text-[0.7rem] tracking-[0.2em] uppercase',
-    'rtl:not-uppercase rtl:text-sm rtl:tracking-normal',
-  ),
+  heading: cn('text-primary text-base font-semibold'),
   sortToggle: cn('flex items-center gap-1.5'),
   sortBtn: cn(
-    'text-secondary cursor-pointer text-[0.65rem] tracking-[0.1em] uppercase transition-colors duration-150',
+    'text-secondary text-2xs cursor-pointer tracking-[0.1em] uppercase transition-colors duration-150',
     'hover:text-primary',
+    'focus-visible:outline-focus rounded-xs focus-visible:outline-2 focus-visible:outline-offset-2',
   ),
   sortBtnActive: cn('text-primary'),
-  sortDivider: cn('text-secondary/40 text-[0.65rem]'),
-  list: cn('flex list-none flex-col gap-[0.6rem]'),
+  sortDivider: cn('text-secondary/40 text-2xs'),
+  list: cn('flex list-none flex-col gap-2.5'),
   item: cn(
-    'grid grid-cols-[1.5rem_1fr_auto_2.5rem] items-center gap-3 text-[0.85rem]',
-    'max-[480px]:grid-cols-[1.5rem_1fr_auto_2rem] max-[480px]:gap-[0.4rem]',
+    'grid grid-cols-[1.5rem_1fr_auto_2.5rem] items-center gap-3 text-sm',
+    'max-[480px]:grid-cols-[1.5rem_1fr_auto_2rem] max-[480px]:gap-1.5',
   ),
   flag: cn('text-center text-base'),
   countryName: cn('text-secondary overflow-hidden text-ellipsis whitespace-nowrap'),
-  percentages: cn('flex items-center gap-[0.4rem]'),
+  percentages: cn('flex items-center gap-1.5'),
   redPct: cn(
-    'text-red min-w-[2.2rem] text-right text-[0.7rem] font-bold',
-    'max-[480px]:min-w-[1.8rem] max-[480px]:text-[0.65rem]',
+    'text-red text-2xs min-w-[2.2rem] text-right font-mono font-bold',
+    'max-[480px]:min-w-[1.8rem]',
   ),
   miniBar: cn('bg-surface flex h-1.5 w-15 shrink-0 overflow-hidden rounded-[3px] max-[480px]:w-10'),
   redFill: cn('bg-red h-full'),
   blueFill: cn('bg-blue h-full'),
   bluePct: cn(
-    'text-blue min-w-[2.2rem] text-left text-[0.7rem] font-bold',
-    'max-[480px]:min-w-[1.8rem] max-[480px]:text-[0.65rem]',
+    'text-blue text-2xs min-w-[2.2rem] text-left font-mono font-bold',
+    'max-[480px]:min-w-[1.8rem]',
   ),
-  total: cn('text-secondary text-right text-[0.75rem]'),
+  total: cn('text-secondary text-right font-mono text-xs'),
 };
 
 export default CountryBreakdown;

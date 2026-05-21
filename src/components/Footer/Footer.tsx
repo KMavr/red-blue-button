@@ -26,13 +26,20 @@ function Footer() {
   );
 }
 
+const focusRing = cn(
+  'focus-visible:outline-focus rounded-xs focus-visible:outline-2 focus-visible:outline-offset-2',
+);
+
 const styles = {
   footer: cn(
-    'border-line bg-canvas fixed right-0 bottom-0 left-0 z-50 flex justify-center gap-6 border-t px-6 py-6',
+    'border-line bg-canvas flex flex-wrap items-center justify-center gap-x-6 gap-y-2 border-t px-6 py-6',
   ),
   copy: cn('text-secondary text-xs tracking-wider'),
-  link: cn('text-secondary hover:text-primary text-xs tracking-wider no-underline'),
-  github: cn('text-secondary hover:text-primary flex items-center text-base leading-none'),
+  link: cn('text-secondary hover:text-primary text-xs tracking-wider no-underline', focusRing),
+  github: cn(
+    'text-secondary hover:text-primary flex items-center text-base leading-none',
+    focusRing,
+  ),
 };
 
 export default Footer;

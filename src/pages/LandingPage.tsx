@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Navigate, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { animate, AnimatePresence, motion } from 'framer-motion';
+import { animate, AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import Cookies from 'js-cookie';
 import VoteButton from '../components/VoteButton/VoteButton';
 import { useVote } from '../hooks/useVote';
@@ -14,6 +14,7 @@ function LandingPage() {
   const { voting, error, submit } = useVote();
   const { total } = useLandingStats();
   const [selectedChoice, setSelectedChoice] = useState<Choice | null>(null);
+  const reduceMotion = useReducedMotion();
 
   function handleVote(choice: Choice) {
     setSelectedChoice(choice);
@@ -25,17 +26,23 @@ function LandingPage() {
   useEffect(() => {
     if (total === null || !countRef.current) return;
     const node = countRef.current;
-    const from = displayedTotal.current;
-    const to = total;
-    animate(from, to, {
+
+    if (reduceMotion) {
+      node.textContent = total.toLocaleString();
+      displayedTotal.current = total;
+      return;
+    }
+
+    const controls = animate(displayedTotal.current, total, {
       duration: 1,
       ease: 'easeOut',
       onUpdate(v) {
         node.textContent = Math.round(v).toLocaleString();
       },
     });
-    displayedTotal.current = to;
-  }, [total]);
+    displayedTotal.current = total;
+    return () => controls.stop();
+  }, [total, reduceMotion]);
 
   if (Cookies.get('voted')) {
     return <Navigate to="/results" replace />;
@@ -87,7 +94,10 @@ function LandingPage() {
         {total !== null && (
           <p className={styles.liveCount}>
             <span className="live-dot" aria-hidden="true" />
-            <span ref={countRef}>{total.toLocaleString()}</span> {t('landing-page.live-count')}
+            <span ref={countRef} className={styles.count}>
+              {total.toLocaleString()}
+            </span>{' '}
+            {t('landing-page.live-count')}
           </p>
         )}
 
@@ -110,27 +120,30 @@ function LandingPage() {
   );
 }
 
+const focusRing = cn(
+  'focus-visible:outline-focus rounded-xs focus-visible:outline-2 focus-visible:outline-offset-2',
+);
+
 const styles = {
-  wrapper: cn('flex min-h-screen items-center justify-center px-5 pt-6 pb-20'),
+  wrapper: cn('flex grow items-center justify-center px-5 py-10'),
   inner: cn('w-full max-w-2xl text-center'),
-  header: cn(
-    'text-secondary mb-5 text-[0.7rem] tracking-[0.25em] uppercase',
-    'rtl:text-[0.9rem] rtl:tracking-normal rtl:normal-case',
-  ),
-  headline: cn('mb-7 text-[clamp(2rem,5vw,3.25rem)] leading-[1.15] font-bold tracking-[-0.02em]'),
-  rules: cn('mb-6 flex flex-col gap-2 text-left rtl:text-right'),
-  rule: cn('text-secondary text-center text-[0.9rem] leading-normal'),
+  header: cn('text-secondary mb-4 text-sm'),
+  headline: cn('text-headline mb-7 font-bold tracking-[-0.02em]'),
+  rules: cn('mb-6 flex flex-col gap-2'),
+  rule: cn('text-secondary text-center text-sm'),
   redLabel: cn('text-red font-semibold'),
   blueLabel: cn('text-blue font-semibold'),
-  cta: cn('mb-8 text-[1.1rem] font-semibold tracking-[0.02em]'),
-  liveCount: cn('text-secondary mt-6 flex items-center justify-center gap-2 text-[0.85rem]'),
-  error: cn('text-red mb-4 text-[0.875rem]'),
+  cta: cn('mb-8 text-lg font-semibold tracking-[0.02em]'),
+  count: cn('font-mono'),
+  liveCount: cn('text-secondary mt-6 flex items-center justify-center gap-2 text-sm'),
+  error: cn('text-red mb-4 text-sm'),
   buttons: cn('flex flex-wrap justify-center gap-5'),
   context: cn('border-line mt-10 border-t pt-8 text-left rtl:text-right'),
-  contextBody: cn('text-secondary mb-4 text-[0.875rem] leading-relaxed'),
+  contextBody: cn('text-secondary mb-4 text-sm'),
   contextLinks: cn('flex flex-wrap gap-5'),
   contextLink: cn(
-    'text-secondary hover:text-primary text-[0.875rem] font-semibold no-underline hover:underline',
+    'text-secondary hover:text-primary text-sm font-semibold no-underline hover:underline',
+    focusRing,
   ),
 };
 
