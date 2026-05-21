@@ -2,7 +2,12 @@
 
 @theme {
   --color-red: #dc2626;
+  --color-red-bright: #ff4444;
+  --color-red-deep: #7f0000;
   --color-blue: #3b82f6;
+  --color-blue-bright: #60a5fa;
+  --color-blue-deep: #1d3470;
+  --color-live: #22c55e;
   --color-canvas: #06060a;
   --color-surface: #0e0e14;
   --color-line: rgba(255, 255, 255, 0.07);
@@ -78,12 +83,17 @@ body {
 
 @layer components {
   .live-dot {
-    @apply animate-pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-green-500;
-    box-shadow: 0 0 6px #22c55e;
+    @apply animate-pulse-dot bg-live inline-block h-1.5 w-1.5 rounded-full;
+    box-shadow: 0 0 6px var(--color-live);
   }
 
   .vote-btn-red {
-    background: radial-gradient(circle at 40% 35%, #ff4444, #dc2626 60%, #7f0000);
+    background: radial-gradient(
+      circle at 40% 35%,
+      var(--color-red-bright),
+      var(--color-red) 60%,
+      var(--color-red-deep)
+    );
     box-shadow:
       0 0 40px rgba(220, 38, 38, 0.45),
       0 0 80px rgba(220, 38, 38, 0.2),
@@ -98,7 +108,12 @@ body {
   }
 
   .vote-btn-blue {
-    background: radial-gradient(circle at 40% 35%, #60a5fa, #3b82f6 60%, #1d3470);
+    background: radial-gradient(
+      circle at 40% 35%,
+      var(--color-blue-bright),
+      var(--color-blue) 60%,
+      var(--color-blue-deep)
+    );
     box-shadow:
       0 0 40px rgba(59, 130, 246, 0.45),
       0 0 80px rgba(59, 130, 246, 0.2),

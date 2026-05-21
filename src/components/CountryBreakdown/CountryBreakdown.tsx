@@ -93,7 +93,7 @@ const styles = {
     'text-red text-2xs min-w-[2.2rem] text-right font-mono font-bold',
     'max-[480px]:min-w-[1.8rem]',
   ),
-  miniBar: cn('bg-surface flex h-1.5 w-15 shrink-0 overflow-hidden rounded-[3px] max-[480px]:w-10'),
+  miniBar: cn('bg-surface flex h-1.5 w-15 shrink-0 overflow-hidden rounded-sm max-[480px]:w-10'),
   redFill: cn('bg-red h-full'),
   blueFill: cn('bg-blue h-full'),
   bluePct: cn(

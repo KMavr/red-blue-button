@@ -37,16 +37,14 @@ function ResultBar({ redPct, bluePct, total, live }: ResultBarProps) {
 
 const styles = {
   wrapper: cn('mb-8'),
-  barContainer: cn(
-    'bg-surface border-line mb-[0.6rem] flex h-4.5 overflow-hidden rounded-[9px] border',
-  ),
+  barContainer: cn('bg-surface border-line mb-2.5 flex h-4.5 overflow-hidden rounded-lg border'),
   redFill: cn(
     'h-full transition-[width] duration-[0.8s] ease-in-out',
-    'bg-[linear-gradient(90deg,#7f0000,#dc2626)] shadow-[2px_0_12px_rgba(220,38,38,0.45)]',
+    'bg-[linear-gradient(90deg,var(--color-red-deep),var(--color-red))]',
   ),
   blueFill: cn(
     'h-full transition-[width] duration-[0.8s] ease-in-out',
-    'bg-[linear-gradient(90deg,#3b82f6,#1d3470)]',
+    'bg-[linear-gradient(90deg,var(--color-blue),var(--color-blue-deep))]',
   ),
   labels: cn(
     'flex items-center justify-between text-xs font-bold tracking-[0.06em] rtl:flex-row-reverse',
