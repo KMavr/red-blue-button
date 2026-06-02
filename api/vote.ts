@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { createClient } from '@supabase/supabase-js';
 import { createHash } from 'crypto';
-import { deriveSurvived } from '../src/utils/resultsUtils';
+import { deriveSurvived } from '../src/utils/resultsUtils.js';
 
 const supabase = createClient(
   process.env.SUPABASE_URL!.replace(/\/$/, ''),
