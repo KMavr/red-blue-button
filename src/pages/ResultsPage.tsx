@@ -8,7 +8,7 @@ import { cn } from '../utils/cn';
 
 function ResultsPage() {
   const { t } = useTranslation();
-  const { results, loading, live, error, majority, survived } = useResults();
+  const { results, loading, live, error, choice, majority, survived } = useResults();
   const { copied, share } = useShare(survived);
 
   if (loading) {
@@ -35,14 +35,17 @@ function ResultsPage() {
             {survived ? (
               <>
                 <svg
-                  className={styles.survivedIcon}
+                  className={choice === 'red' ? styles.survivedIconRed : styles.survivedIcon}
                   viewBox="0 0 24 24"
                   fill="none"
                   aria-hidden="true">
                   <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
                   <circle cx="12" cy="12" r="3.5" fill="currentColor" />
                 </svg>
-                <h1 className={styles.survivedHeading}>{t('results-page.outcome.survived')}</h1>
+                <h1
+                  className={choice === 'red' ? styles.survivedHeadingRed : styles.survivedHeading}>
+                  {t('results-page.outcome.survived')}
+                </h1>
               </>
             ) : (
               <>
@@ -58,9 +61,7 @@ function ResultsPage() {
               </>
             )}
             <p className={styles.outcomeSub}>
-              {majority === 'blue'
-                ? t('results-page.outcome.sub.blue-majority')
-                : t('results-page.outcome.sub.red-majority')}
+              {t(`results-page.outcome.sub.${majority}-majority.${choice}`)}
             </p>
           </div>
         )}
@@ -104,6 +105,13 @@ const styles = {
   survivedHeading: cn(
     'text-outcome mb-3 font-black tracking-[-0.02em]',
     'text-blue [text-shadow:0_0_60px_rgba(59,130,246,0.45)]',
+  ),
+  survivedIconRed: cn(
+    'text-red mx-auto mb-2 block h-10 w-10 drop-shadow-[0_0_12px_rgba(220,38,38,0.45)]',
+  ),
+  survivedHeadingRed: cn(
+    'text-outcome mb-3 font-black tracking-[-0.02em]',
+    'text-red [text-shadow:0_0_60px_rgba(220,38,38,0.45)]',
   ),
   diedIcon: cn('text-red mx-auto mb-2 block h-10 w-10 drop-shadow-[0_0_12px_rgba(220,38,38,0.45)]'),
   diedHeading: cn(

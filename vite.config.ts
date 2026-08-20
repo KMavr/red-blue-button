@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import type { Plugin } from 'vite';
 
-const MOCK_RESULTS = {
+const MOCK_RESULTS_BLUE = {
   red: 3812,
   blue: 5944,
   total: 9756,
@@ -23,13 +23,26 @@ const MOCK_RESULTS = {
   ],
 };
 
+const swapColors = (r: typeof MOCK_RESULTS_BLUE) => ({
+  ...r,
+  red: r.blue,
+  blue: r.red,
+  redPct: r.bluePct,
+  bluePct: r.redPct,
+  countries: r.countries.map((c) => ({ ...c, red: c.blue, blue: c.red })),
+});
+
+// Flip to 'red' to exercise the red-majority outcome path in dev.
+const MAJORITY = 'blue' as 'red' | 'blue';
+const mockResults = MAJORITY === 'red' ? swapColors(MOCK_RESULTS_BLUE) : MOCK_RESULTS_BLUE;
+
 function mockApiPlugin(): Plugin {
   return {
     name: 'mock-api',
     configureServer(server) {
       server.middlewares.use('/api/results', (_req, res) => {
         res.setHeader('Content-Type', 'application/json');
-        res.end(JSON.stringify(MOCK_RESULTS));
+        res.end(JSON.stringify(mockResults));
       });
 
       server.middlewares.use('/api/vote', (req, res) => {
@@ -38,17 +51,8 @@ function mockApiPlugin(): Plugin {
           res.end(JSON.stringify({ error: 'Method not allowed' }));
           return;
         }
-        let body = '';
-        req.on('data', (chunk: Buffer) => {
-          body += chunk.toString();
-        });
-        req.on('end', () => {
-          const { choice } = JSON.parse(body || '{}');
-          const survived = choice === 'red' || MOCK_RESULTS.blue >= MOCK_RESULTS.red;
-
-          res.setHeader('Content-Type', 'application/json');
-          res.end(JSON.stringify({ survived, results: MOCK_RESULTS }));
-        });
+        res.setHeader('Content-Type', 'application/json');
+        res.end(JSON.stringify({ results: mockResults }));
       });
     },
   };

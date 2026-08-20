@@ -63,7 +63,7 @@ describe('useVote', () => {
       expect(mockCookiesSet).toHaveBeenCalledWith('last_choice', 'red', { expires: 365 });
     });
 
-    it('should navigate to /results with survived and results state on success', async () => {
+    it('should navigate to /results with results state on success', async () => {
       mockFetch(200, successBody);
       const { result } = renderHook(() => useVote());
 
@@ -72,7 +72,7 @@ describe('useVote', () => {
       });
 
       expect(mockNavigate).toHaveBeenCalledWith('/results', {
-        state: { choice: 'blue', survived: true, results: successBody.results },
+        state: { choice: 'blue', results: successBody.results },
       });
     });
 
