@@ -101,8 +101,8 @@ describe('useResults', () => {
   });
 
   describe('state.results provided (post-vote navigation)', () => {
-    it('should skip the initial fetch and use state values for results, survived, and choice', () => {
-      mockLocationState = { choice: 'blue', survived: true, results: MOCK_RESULTS };
+    it('should skip the initial fetch and use state values for results and choice', () => {
+      mockLocationState = { choice: 'blue', results: MOCK_RESULTS };
       mockFetch(MOCK_RESULTS);
       const { result } = renderHook(() => useResults());
 
@@ -208,7 +208,7 @@ describe('useResults', () => {
     });
 
     it('should keep existing results when a polling fetch fails', async () => {
-      mockLocationState = { choice: 'blue', survived: true, results: MOCK_RESULTS };
+      mockLocationState = { choice: 'blue', results: MOCK_RESULTS };
       vi.stubGlobal(
         'fetch',
         vi.fn().mockResolvedValue({ ok: false, json: () => Promise.resolve({}) }),

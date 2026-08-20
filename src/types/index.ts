@@ -17,6 +17,5 @@ export interface Results {
 }
 
 export interface VoteResponse {
-  survived: boolean;
   results: Results;
 }

@@ -38,7 +38,7 @@ export function useVote() {
       Cookies.set('voted', '1', { expires: 1 });
       Cookies.set('last_choice', choice, { expires: 365 });
       navigate('/results', {
-        state: { choice, survived: data.survived, results: data.results },
+        state: { choice, results: data.results },
       });
     } catch {
       setError(t('landing-page.error.network'));

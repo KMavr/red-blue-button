@@ -6,7 +6,6 @@ import { deriveSurvived } from '../utils/resultsUtils';
 
 interface LocationState {
   choice?: Choice;
-  survived?: boolean;
   results?: Results;
 }
 
@@ -61,7 +60,7 @@ export function useResults() {
   let majority: 'blue' | 'red' | null = null;
   if (results) majority = results.blue >= results.red ? 'blue' : 'red';
 
-  const survived = deriveSurvived(state?.survived, majority, choice);
+  const survived = deriveSurvived(majority, choice);
 
   return { results, loading, live, error, choice, majority, survived };
 }
